@@ -1,0 +1,65 @@
+/home/wangsh/DBALwithImgData-main/main.py:10: DeprecationWarning: Please use `gaussian_filter1d` from the `scipy.ndimage` namespace, the `scipy.ndimage.filters` namespace is deprecated.
+  from scipy.ndimage.filters import gaussian_filter1d
+Using device: cuda:0
+state_loop:  [True]
+
+---------- Start max_entropy-MC_dropout=True training! ----------
+args.dataset is:  ASL_MNIST_imbal
+label_num is:  25
+********** Experiment Iterations: 1/1 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.5100
+test Accuracy after query 5: 0.4128
+Val Accuracy after query 10: 0.5400
+test Accuracy after query 10: 0.4506
+Val Accuracy after query 15: 0.5600
+test Accuracy after query 15: 0.5040
+Val Accuracy after query 20: 0.6300
+test Accuracy after query 20: 0.5502
+Val Accuracy after query 25: 0.7600
+test Accuracy after query 25: 0.6278
+Val Accuracy after query 30: 0.7900
+test Accuracy after query 30: 0.6574
+Val Accuracy after query 35: 0.8400
+test Accuracy after query 35: 0.7312
+Val Accuracy after query 40: 0.8400
+test Accuracy after query 40: 0.7668
+Val Accuracy after query 45: 0.9300
+test Accuracy after query 45: 0.7880
+Val Accuracy after query 50: 0.9100
+test Accuracy after query 50: 0.8132
+Val Accuracy after query 55: 0.9500
+test Accuracy after query 55: 0.8278
+Val Accuracy after query 60: 0.9700
+test Accuracy after query 60: 0.8504
+Val Accuracy after query 65: 0.9600
+test Accuracy after query 65: 0.8662
+Val Accuracy after query 70: 0.9700
+test Accuracy after query 70: 0.8824
+Val Accuracy after query 75: 0.9900
+test Accuracy after query 75: 0.8972
+Val Accuracy after query 80: 0.9900
+test Accuracy after query 80: 0.9064
+Val Accuracy after query 85: 0.9900
+test Accuracy after query 85: 0.9132
+Val Accuracy after query 90: 0.9900
+test Accuracy after query 90: 0.9220
+Val Accuracy after query 95: 1.0000
+test Accuracy after query 95: 0.9258
+Val Accuracy after query 100: 1.0000
+test Accuracy after query 100: 0.9280
+Val Accuracy after query 105: 1.0000
+test Accuracy after query 105: 0.9180
+Val Accuracy after query 110: 1.0000
+test Accuracy after query 110: 0.9394
+Val Accuracy after query 115: 1.0000
+test Accuracy after query 115: 0.9372
+/home/wangsh/DBALwithImgData-main/main.py:99: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show()
+Val Accuracy after query 120: 1.0000
+test Accuracy after query 120: 0.9338
+********** Test Accuracy per experiment: 0.9338 **********
+********** Experiment 1 (max_entropy-MC_dropout=True): 0:17:44 **********
+Average Test score for max_entropy-MC_dropout=True: 0.9338
+--------------- Done Training! ---------------

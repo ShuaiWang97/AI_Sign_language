@@ -1,0 +1,549 @@
+/home/wangsh/DBALwithImgData-main/main.py:10: DeprecationWarning: Please use `gaussian_filter1d` from the `scipy.ndimage` namespace, the `scipy.ndimage.filters` namespace is deprecated.
+  from scipy.ndimage.filters import gaussian_filter1d
+Using device: cuda:0
+i :  0
+i :  1
+i :  2
+i :  3
+i :  4
+i :  5
+i :  6
+i :  7
+i :  8
+i :  9
+i :  10
+i :  11
+i :  12
+i :  13
+i :  14
+i :  15
+i :  16
+i :  17
+i :  18
+i :  19
+i :  20
+i :  21
+i :  22
+i :  23
+i :  24
+i :  25
+i :  26
+i :  27
+i :  28
+i :  29
+i :  30
+i :  31
+i :  32
+i :  33
+i :  34
+i :  35
+i :  36
+i :  37
+Initial training data points: 74
+Data distribution for each class: [2 2 2 2 2 2 2 2 2 0 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+ 2]
+
+---------- Start uniform-MC_dropout=True training! ----------
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.1500
+Val Accuracy after query 10: 0.1500
+Val Accuracy after query 15: 0.1400
+Val Accuracy after query 20: 0.1700
+Val Accuracy after query 25: 0.1600
+Val Accuracy after query 30: 0.1800
+Val Accuracy after query 35: 0.2100
+Val Accuracy after query 40: 0.2200
+Val Accuracy after query 45: 0.2400
+Val Accuracy after query 50: 0.2200
+Val Accuracy after query 55: 0.2300
+Val Accuracy after query 60: 0.2500
+Val Accuracy after query 65: 0.2900
+Val Accuracy after query 70: 0.2700
+Val Accuracy after query 75: 0.3300
+Val Accuracy after query 80: 0.2800
+Val Accuracy after query 85: 0.2900
+Val Accuracy after query 90: 0.3500
+Val Accuracy after query 95: 0.3200
+Val Accuracy after query 100: 0.3600
+Val Accuracy after query 105: 0.3100
+Val Accuracy after query 110: 0.3200
+Val Accuracy after query 115: 0.2900
+Val Accuracy after query 120: 0.3900
+Val Accuracy after query 125: 0.4000
+Val Accuracy after query 130: 0.3800
+Val Accuracy after query 135: 0.3900
+Val Accuracy after query 140: 0.4000
+Val Accuracy after query 145: 0.3200
+Val Accuracy after query 150: 0.4100
+********** Test Accuracy per experiment: 0.354 **********
+********** Experiment 1 (uniform-MC_dropout=True): 0:5:26 **********
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.1500
+Val Accuracy after query 10: 0.1700
+Val Accuracy after query 15: 0.2000
+Val Accuracy after query 20: 0.1900
+Val Accuracy after query 25: 0.1600
+Val Accuracy after query 30: 0.2100
+Val Accuracy after query 35: 0.2100
+Val Accuracy after query 40: 0.2500
+Val Accuracy after query 45: 0.2000
+Val Accuracy after query 50: 0.2400
+Val Accuracy after query 55: 0.2600
+Val Accuracy after query 60: 0.2700
+Val Accuracy after query 65: 0.2700
+Val Accuracy after query 70: 0.2900
+Val Accuracy after query 75: 0.2700
+Val Accuracy after query 80: 0.2900
+Val Accuracy after query 85: 0.3300
+Val Accuracy after query 90: 0.3100
+Val Accuracy after query 95: 0.3000
+Val Accuracy after query 100: 0.3200
+Val Accuracy after query 105: 0.2900
+Val Accuracy after query 110: 0.3000
+Val Accuracy after query 115: 0.3000
+Val Accuracy after query 120: 0.3500
+Val Accuracy after query 125: 0.3400
+Val Accuracy after query 130: 0.3300
+Val Accuracy after query 135: 0.3300
+Val Accuracy after query 140: 0.3800
+Val Accuracy after query 145: 0.3400
+Val Accuracy after query 150: 0.3700
+********** Test Accuracy per experiment: 0.326 **********
+********** Experiment 2 (uniform-MC_dropout=True): 0:5:18 **********
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.1400
+Val Accuracy after query 10: 0.1300
+Val Accuracy after query 15: 0.1300
+Val Accuracy after query 20: 0.1200
+Val Accuracy after query 25: 0.0700
+Val Accuracy after query 30: 0.1700
+Val Accuracy after query 35: 0.1600
+Val Accuracy after query 40: 0.2000
+Val Accuracy after query 45: 0.1900
+Val Accuracy after query 50: 0.1800
+Val Accuracy after query 55: 0.2300
+Val Accuracy after query 60: 0.1800
+Val Accuracy after query 65: 0.2400
+Val Accuracy after query 70: 0.2300
+Val Accuracy after query 75: 0.2400
+Val Accuracy after query 80: 0.2300
+Val Accuracy after query 85: 0.2700
+Val Accuracy after query 90: 0.2700
+Val Accuracy after query 95: 0.2900
+Val Accuracy after query 100: 0.2500
+Val Accuracy after query 105: 0.3000
+Val Accuracy after query 110: 0.2900
+Val Accuracy after query 115: 0.3400
+Val Accuracy after query 120: 0.3100
+Val Accuracy after query 125: 0.3400
+Val Accuracy after query 130: 0.3200
+Val Accuracy after query 135: 0.3700
+Val Accuracy after query 140: 0.3300
+Val Accuracy after query 145: 0.3300
+Val Accuracy after query 150: 0.3800
+********** Test Accuracy per experiment: 0.3446666666666667 **********
+********** Experiment 3 (uniform-MC_dropout=True): 0:5:15 **********
+Average Test score for uniform-MC_dropout=True: 0.34155555555555556
+Saved: result_npy/uniform-MC_dropout=True.npy
+
+---------- Start max_entropy-MC_dropout=True training! ----------
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.1700
+Val Accuracy after query 10: 0.1700
+Val Accuracy after query 15: 0.1200
+Val Accuracy after query 20: 0.1300
+Val Accuracy after query 25: 0.1900
+Val Accuracy after query 30: 0.1900
+Val Accuracy after query 35: 0.1900
+Val Accuracy after query 40: 0.2200
+Val Accuracy after query 45: 0.2300
+Val Accuracy after query 50: 0.2300
+Val Accuracy after query 55: 0.2200
+Val Accuracy after query 60: 0.2300
+Val Accuracy after query 65: 0.2400
+Val Accuracy after query 70: 0.2500
+Val Accuracy after query 75: 0.2900
+Val Accuracy after query 80: 0.3200
+Val Accuracy after query 85: 0.3300
+Val Accuracy after query 90: 0.3000
+Val Accuracy after query 95: 0.3400
+Val Accuracy after query 100: 0.3200
+Val Accuracy after query 105: 0.3600
+Val Accuracy after query 110: 0.3300
+Val Accuracy after query 115: 0.3000
+Val Accuracy after query 120: 0.3400
+Val Accuracy after query 125: 0.3200
+Val Accuracy after query 130: 0.3300
+Val Accuracy after query 135: 0.3200
+Val Accuracy after query 140: 0.3500
+Val Accuracy after query 145: 0.3800
+Val Accuracy after query 150: 0.3500
+********** Test Accuracy per experiment: 0.32066666666666666 **********
+********** Experiment 1 (max_entropy-MC_dropout=True): 0:26:0 **********
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.1000
+Val Accuracy after query 10: 0.1000
+Val Accuracy after query 15: 0.1400
+Val Accuracy after query 20: 0.2000
+Val Accuracy after query 25: 0.2100
+Val Accuracy after query 30: 0.2300
+Val Accuracy after query 35: 0.2400
+Val Accuracy after query 40: 0.2500
+Val Accuracy after query 45: 0.2800
+Val Accuracy after query 50: 0.2900
+Val Accuracy after query 55: 0.2500
+Val Accuracy after query 60: 0.2400
+Val Accuracy after query 65: 0.2700
+Val Accuracy after query 70: 0.2700
+Val Accuracy after query 75: 0.2800
+Val Accuracy after query 80: 0.2900
+Val Accuracy after query 85: 0.3000
+Val Accuracy after query 90: 0.3000
+Val Accuracy after query 95: 0.3100
+Val Accuracy after query 100: 0.2700
+Val Accuracy after query 105: 0.3400
+Val Accuracy after query 110: 0.3500
+Val Accuracy after query 115: 0.3200
+Val Accuracy after query 120: 0.3700
+Val Accuracy after query 125: 0.3600
+Val Accuracy after query 130: 0.4100
+Val Accuracy after query 135: 0.3400
+Val Accuracy after query 140: 0.3500
+Val Accuracy after query 145: 0.3400
+Val Accuracy after query 150: 0.3500
+********** Test Accuracy per experiment: 0.294 **********
+********** Experiment 2 (max_entropy-MC_dropout=True): 0:25:59 **********
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.1700
+Val Accuracy after query 10: 0.1900
+Val Accuracy after query 15: 0.2200
+Val Accuracy after query 20: 0.2000
+Val Accuracy after query 25: 0.1800
+Val Accuracy after query 30: 0.2300
+Val Accuracy after query 35: 0.2200
+Val Accuracy after query 40: 0.2000
+Val Accuracy after query 45: 0.2700
+Val Accuracy after query 50: 0.2600
+Val Accuracy after query 55: 0.2700
+Val Accuracy after query 60: 0.2400
+Val Accuracy after query 65: 0.2500
+Val Accuracy after query 70: 0.2500
+Val Accuracy after query 75: 0.2600
+Val Accuracy after query 80: 0.2900
+Val Accuracy after query 85: 0.2800
+Val Accuracy after query 90: 0.3300
+Val Accuracy after query 95: 0.2900
+Val Accuracy after query 100: 0.2700
+Val Accuracy after query 105: 0.2700
+Val Accuracy after query 110: 0.2900
+Val Accuracy after query 115: 0.3200
+Val Accuracy after query 120: 0.3300
+Val Accuracy after query 125: 0.3600
+Val Accuracy after query 130: 0.3600
+Val Accuracy after query 135: 0.3000
+Val Accuracy after query 140: 0.3400
+Val Accuracy after query 145: 0.3400
+Val Accuracy after query 150: 0.3700
+********** Test Accuracy per experiment: 0.30733333333333335 **********
+********** Experiment 3 (max_entropy-MC_dropout=True): 0:25:59 **********
+Average Test score for max_entropy-MC_dropout=True: 0.30733333333333335
+Saved: result_npy/max_entropy-MC_dropout=True.npy
+
+---------- Start bald-MC_dropout=True training! ----------
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.2100
+Val Accuracy after query 10: 0.2100
+Val Accuracy after query 15: 0.2100
+Val Accuracy after query 20: 0.2100
+Val Accuracy after query 25: 0.2100
+Val Accuracy after query 30: 0.2300
+Val Accuracy after query 35: 0.2800
+Val Accuracy after query 40: 0.2700
+Val Accuracy after query 45: 0.2700
+Val Accuracy after query 50: 0.3100
+Val Accuracy after query 55: 0.3200
+Val Accuracy after query 60: 0.3500
+Val Accuracy after query 65: 0.3500
+Val Accuracy after query 70: 0.3100
+Val Accuracy after query 75: 0.3200
+Val Accuracy after query 80: 0.2800
+Val Accuracy after query 85: 0.2700
+Val Accuracy after query 90: 0.3100
+Val Accuracy after query 95: 0.3500
+Val Accuracy after query 100: 0.3600
+Val Accuracy after query 105: 0.4000
+Val Accuracy after query 110: 0.3700
+Val Accuracy after query 115: 0.3300
+Val Accuracy after query 120: 0.3700
+Val Accuracy after query 125: 0.3500
+Val Accuracy after query 130: 0.3700
+Val Accuracy after query 135: 0.3100
+Val Accuracy after query 140: 0.3300
+Val Accuracy after query 145: 0.4000
+Val Accuracy after query 150: 0.3200
+********** Test Accuracy per experiment: 0.2833333333333333 **********
+********** Experiment 1 (bald-MC_dropout=True): 0:26:15 **********
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.1800
+Val Accuracy after query 10: 0.1900
+Val Accuracy after query 15: 0.1600
+Val Accuracy after query 20: 0.1700
+Val Accuracy after query 25: 0.1500
+Val Accuracy after query 30: 0.2100
+Val Accuracy after query 35: 0.1800
+Val Accuracy after query 40: 0.1600
+Val Accuracy after query 45: 0.1500
+Val Accuracy after query 50: 0.1800
+Val Accuracy after query 55: 0.1900
+Val Accuracy after query 60: 0.2200
+Val Accuracy after query 65: 0.2300
+Val Accuracy after query 70: 0.2200
+Val Accuracy after query 75: 0.2500
+Val Accuracy after query 80: 0.2200
+Val Accuracy after query 85: 0.2200
+Val Accuracy after query 90: 0.2500
+Val Accuracy after query 95: 0.2300
+Val Accuracy after query 100: 0.2300
+Val Accuracy after query 105: 0.2500
+Val Accuracy after query 110: 0.2000
+Val Accuracy after query 115: 0.2800
+Val Accuracy after query 120: 0.2500
+Val Accuracy after query 125: 0.2600
+Val Accuracy after query 130: 0.2700
+Val Accuracy after query 135: 0.2700
+Val Accuracy after query 140: 0.3000
+Val Accuracy after query 145: 0.3100
+Val Accuracy after query 150: 0.2800
+********** Test Accuracy per experiment: 0.2906666666666667 **********
+********** Experiment 2 (bald-MC_dropout=True): 0:26:20 **********
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.2000
+Val Accuracy after query 10: 0.1800
+Val Accuracy after query 15: 0.1800
+Val Accuracy after query 20: 0.1600
+Val Accuracy after query 25: 0.1600
+Val Accuracy after query 30: 0.1700
+Val Accuracy after query 35: 0.2000
+Val Accuracy after query 40: 0.2300
+Val Accuracy after query 45: 0.2200
+Val Accuracy after query 50: 0.2000
+Val Accuracy after query 55: 0.2100
+Val Accuracy after query 60: 0.2100
+Val Accuracy after query 65: 0.2100
+Val Accuracy after query 70: 0.2500
+Val Accuracy after query 75: 0.2800
+Val Accuracy after query 80: 0.2500
+Val Accuracy after query 85: 0.2800
+Val Accuracy after query 90: 0.3000
+Val Accuracy after query 95: 0.3100
+Val Accuracy after query 100: 0.3100
+Val Accuracy after query 105: 0.3900
+Val Accuracy after query 110: 0.2900
+Val Accuracy after query 115: 0.2800
+Val Accuracy after query 120: 0.3100
+Val Accuracy after query 125: 0.3500
+Val Accuracy after query 130: 0.3000
+Val Accuracy after query 135: 0.3000
+Val Accuracy after query 140: 0.3600
+Val Accuracy after query 145: 0.3700
+Val Accuracy after query 150: 0.3700
+********** Test Accuracy per experiment: 0.332 **********
+********** Experiment 3 (bald-MC_dropout=True): 0:26:21 **********
+Average Test score for bald-MC_dropout=True: 0.30200000000000005
+Saved: result_npy/bald-MC_dropout=True.npy
+
+---------- Start var_ratios-MC_dropout=True training! ----------
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.1500
+Val Accuracy after query 10: 0.1700
+Val Accuracy after query 15: 0.1300
+Val Accuracy after query 20: 0.1800
+Val Accuracy after query 25: 0.2000
+Val Accuracy after query 30: 0.2100
+Val Accuracy after query 35: 0.2200
+Val Accuracy after query 40: 0.2700
+Val Accuracy after query 45: 0.2400
+Val Accuracy after query 50: 0.2500
+Val Accuracy after query 55: 0.2500
+Val Accuracy after query 60: 0.2800
+Val Accuracy after query 65: 0.2400
+Val Accuracy after query 70: 0.2600
+Val Accuracy after query 75: 0.3300
+Val Accuracy after query 80: 0.3600
+Val Accuracy after query 85: 0.3200
+Val Accuracy after query 90: 0.3200
+Val Accuracy after query 95: 0.3100
+Val Accuracy after query 100: 0.2700
+Val Accuracy after query 105: 0.3100
+Val Accuracy after query 110: 0.3100
+Val Accuracy after query 115: 0.3300
+Val Accuracy after query 120: 0.2900
+Val Accuracy after query 125: 0.3200
+Val Accuracy after query 130: 0.3500
+Val Accuracy after query 135: 0.3200
+Val Accuracy after query 140: 0.3200
+Val Accuracy after query 145: 0.2900
+Val Accuracy after query 150: 0.3100
+********** Test Accuracy per experiment: 0.288 **********
+********** Experiment 1 (var_ratios-MC_dropout=True): 0:26:22 **********
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.2200
+Val Accuracy after query 10: 0.1800
+Val Accuracy after query 15: 0.1300
+Val Accuracy after query 20: 0.1700
+Val Accuracy after query 25: 0.1500
+Val Accuracy after query 30: 0.1800
+Val Accuracy after query 35: 0.1800
+Val Accuracy after query 40: 0.2100
+Val Accuracy after query 45: 0.2300
+Val Accuracy after query 50: 0.2200
+Val Accuracy after query 55: 0.2300
+Val Accuracy after query 60: 0.2600
+Val Accuracy after query 65: 0.2300
+Val Accuracy after query 70: 0.1900
+Val Accuracy after query 75: 0.2100
+Val Accuracy after query 80: 0.2400
+Val Accuracy after query 85: 0.2500
+Val Accuracy after query 90: 0.2000
+Val Accuracy after query 95: 0.2500
+Val Accuracy after query 100: 0.2500
+Val Accuracy after query 105: 0.2400
+Val Accuracy after query 110: 0.2400
+Val Accuracy after query 115: 0.2200
+Val Accuracy after query 120: 0.2600
+Val Accuracy after query 125: 0.2500
+Val Accuracy after query 130: 0.2800
+Val Accuracy after query 135: 0.2300
+Val Accuracy after query 140: 0.2700
+Val Accuracy after query 145: 0.2800
+Val Accuracy after query 150: 0.2800
+********** Test Accuracy per experiment: 0.3253333333333333 **********
+********** Experiment 2 (var_ratios-MC_dropout=True): 0:26:23 **********
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.1400
+Val Accuracy after query 10: 0.1700
+Val Accuracy after query 15: 0.1900
+Val Accuracy after query 20: 0.1600
+Val Accuracy after query 25: 0.2000
+Val Accuracy after query 30: 0.1700
+Val Accuracy after query 35: 0.1800
+Val Accuracy after query 40: 0.1700
+Val Accuracy after query 45: 0.1600
+Val Accuracy after query 50: 0.1400
+Val Accuracy after query 55: 0.1800
+Val Accuracy after query 60: 0.1200
+Val Accuracy after query 65: 0.1600
+Val Accuracy after query 70: 0.1700
+Val Accuracy after query 75: 0.2000
+Val Accuracy after query 80: 0.2300
+Val Accuracy after query 85: 0.2400
+Val Accuracy after query 90: 0.2600
+Val Accuracy after query 95: 0.2200
+Val Accuracy after query 100: 0.2600
+Val Accuracy after query 105: 0.2200
+Val Accuracy after query 110: 0.3000
+Val Accuracy after query 115: 0.2500
+Val Accuracy after query 120: 0.3100
+Val Accuracy after query 125: 0.3000
+Val Accuracy after query 130: 0.3100
+Val Accuracy after query 135: 0.2900
+Val Accuracy after query 140: 0.3100
+Val Accuracy after query 145: 0.3300
+Val Accuracy after query 150: 0.3500
+********** Test Accuracy per experiment: 0.32 **********
+********** Experiment 3 (var_ratios-MC_dropout=True): 0:26:25 **********
+Average Test score for var_ratios-MC_dropout=True: 0.3111111111111111
+Saved: result_npy/var_ratios-MC_dropout=True.npy
+
+---------- Start mean_std-MC_dropout=True training! ----------
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.1300
+Val Accuracy after query 10: 0.2300
+Val Accuracy after query 15: 0.1800
+Val Accuracy after query 20: 0.1700
+Val Accuracy after query 25: 0.2400
+Val Accuracy after query 30: 0.2000
+Val Accuracy after query 35: 0.2400
+Val Accuracy after query 40: 0.1800
+Val Accuracy after query 45: 0.2000
+Val Accuracy after query 50: 0.1900
+Val Accuracy after query 55: 0.2600
+Val Accuracy after query 60: 0.2500
+Val Accuracy after query 65: 0.2600
+Val Accuracy after query 70: 0.2500
+Val Accuracy after query 75: 0.2600
+Val Accuracy after query 80: 0.2900
+Val Accuracy after query 85: 0.3000
+Val Accuracy after query 90: 0.3100
+Val Accuracy after query 95: 0.3000
+Val Accuracy after query 100: 0.3200
+Val Accuracy after query 105: 0.3500
+Val Accuracy after query 110: 0.3100
+Val Accuracy after query 115: 0.3200
+Val Accuracy after query 120: 0.3800
+Val Accuracy after query 125: 0.3100
+Val Accuracy after query 130: 0.3400
+Val Accuracy after query 135: 0.3200
+Val Accuracy after query 140: 0.3800
+Val Accuracy after query 145: 0.3500
+Val Accuracy after query 150: 0.3400
+********** Test Accuracy per experiment: 0.31666666666666665 **********
+********** Experiment 1 (mean_std-MC_dropout=True): 0:26:9 **********
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (74, 1, 28, 28)
+y_init.shape:  (74,)
+Val Accuracy after query 5: 0.1600
+Val Accuracy after query 10: 0.1900
+Val Accuracy after query 15: 0.1600
+Val Accuracy after query 20: 0.1500
+Val Accuracy after query 25: 0.1400
+Val Accuracy after query 30: 0.1800
+Val Accuracy after query 35: 0.1600
+Val Accuracy after query 40: 0.2000
+Val Accuracy after query 45: 0.2100
+Val Accuracy after query 50: 0.2000
+Val Accuracy after query 55: 0.2200
+Val Accuracy after query 60: 0.2200
+Val Accuracy after query 65: 0.2600
+Val Accuracy after query 70: 0.2700
+Val Accuracy after query 75: 0.2500
+Val Accuracy after query 80: 0.3100
+Val Accuracy after query 85: 0.2700
+Val Accuracy after query 90: 0.3200
+Val Accuracy after query 95: 0.3100
+Val Accuracy after query 100: 0.3000
+Val Accuracy after query 105: 0.3200
+Val Accuracy after query 110: 0.3200
+Val Accuracy after query 115: 0.3000
+Val Accuracy after query 120: 0.3300
+Val Accuracy after query 125: 0.3400
+Val Accuracy after query 130: 0.3300
+slurmstepd: error: *** JOB 8774573 ON r31n2 CANCELLED AT 2022-03-02T00:11:38 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: Timed out waiting for job step to complete

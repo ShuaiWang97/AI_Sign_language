@@ -1,0 +1,954 @@
+/home/wangsh/DBALwithImgData-main/main.py:10: DeprecationWarning: Please use `gaussian_filter1d` from the `scipy.ndimage` namespace, the `scipy.ndimage.filters` namespace is deprecated.
+  from scipy.ndimage.filters import gaussian_filter1d
+Using device: cuda:0
+
+---------- Start uniform-MC_dropout=True training! ----------
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.1700
+test Accuracy after query 5: 0.1225
+Val Accuracy after query 10: 0.1900
+test Accuracy after query 10: 0.1514
+Val Accuracy after query 15: 0.2500
+test Accuracy after query 15: 0.1828
+Val Accuracy after query 20: 0.3200
+test Accuracy after query 20: 0.2120
+Val Accuracy after query 25: 0.3800
+test Accuracy after query 25: 0.2334
+Val Accuracy after query 30: 0.4300
+test Accuracy after query 30: 0.2593
+Val Accuracy after query 35: 0.4100
+test Accuracy after query 35: 0.2848
+Val Accuracy after query 40: 0.4300
+test Accuracy after query 40: 0.3057
+Val Accuracy after query 45: 0.4200
+test Accuracy after query 45: 0.3266
+Val Accuracy after query 50: 0.4500
+test Accuracy after query 50: 0.3496
+Val Accuracy after query 55: 0.4800
+test Accuracy after query 55: 0.3706
+Val Accuracy after query 60: 0.5400
+test Accuracy after query 60: 0.3869
+Val Accuracy after query 65: 0.5200
+test Accuracy after query 65: 0.3869
+Val Accuracy after query 70: 0.5400
+test Accuracy after query 70: 0.4007
+Val Accuracy after query 75: 0.5700
+test Accuracy after query 75: 0.4153
+Val Accuracy after query 80: 0.5900
+test Accuracy after query 80: 0.4354
+Val Accuracy after query 85: 0.6400
+test Accuracy after query 85: 0.4433
+Val Accuracy after query 90: 0.6500
+test Accuracy after query 90: 0.4571
+Val Accuracy after query 95: 0.6900
+test Accuracy after query 95: 0.4726
+Val Accuracy after query 100: 0.7400
+test Accuracy after query 100: 0.4714
+Val Accuracy after query 105: 0.7600
+test Accuracy after query 105: 0.4760
+Val Accuracy after query 110: 0.7100
+test Accuracy after query 110: 0.4927
+Val Accuracy after query 115: 0.7200
+test Accuracy after query 115: 0.4885
+Val Accuracy after query 120: 0.7400
+test Accuracy after query 120: 0.4969
+Val Accuracy after query 125: 0.7500
+test Accuracy after query 125: 0.5102
+Val Accuracy after query 130: 0.7600
+test Accuracy after query 130: 0.5056
+Val Accuracy after query 135: 0.7400
+test Accuracy after query 135: 0.5190
+Val Accuracy after query 140: 0.7400
+test Accuracy after query 140: 0.5337
+Val Accuracy after query 145: 0.7900
+test Accuracy after query 145: 0.5341
+Val Accuracy after query 150: 0.7800
+test Accuracy after query 150: 0.5471
+********** Test Accuracy per experiment: 0.5470514429109159 **********
+********** Experiment 1 (uniform-MC_dropout=True): 0:5:54 **********
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.2100
+test Accuracy after query 5: 0.1376
+Val Accuracy after query 10: 0.2200
+test Accuracy after query 10: 0.1547
+Val Accuracy after query 15: 0.2800
+test Accuracy after query 15: 0.1878
+Val Accuracy after query 20: 0.3600
+test Accuracy after query 20: 0.2150
+Val Accuracy after query 25: 0.4100
+test Accuracy after query 25: 0.2388
+Val Accuracy after query 30: 0.4300
+test Accuracy after query 30: 0.2635
+Val Accuracy after query 35: 0.4400
+test Accuracy after query 35: 0.2932
+Val Accuracy after query 40: 0.4900
+test Accuracy after query 40: 0.3124
+Val Accuracy after query 45: 0.5100
+test Accuracy after query 45: 0.3237
+Val Accuracy after query 50: 0.5200
+test Accuracy after query 50: 0.3409
+Val Accuracy after query 55: 0.5800
+test Accuracy after query 55: 0.3563
+Val Accuracy after query 60: 0.5600
+test Accuracy after query 60: 0.3651
+Val Accuracy after query 65: 0.5900
+test Accuracy after query 65: 0.3877
+Val Accuracy after query 70: 0.5700
+test Accuracy after query 70: 0.3977
+Val Accuracy after query 75: 0.6100
+test Accuracy after query 75: 0.4141
+Val Accuracy after query 80: 0.6300
+test Accuracy after query 80: 0.4325
+Val Accuracy after query 85: 0.6600
+test Accuracy after query 85: 0.4358
+Val Accuracy after query 90: 0.6500
+test Accuracy after query 90: 0.4442
+Val Accuracy after query 95: 0.6900
+test Accuracy after query 95: 0.4596
+Val Accuracy after query 100: 0.6900
+test Accuracy after query 100: 0.4818
+Val Accuracy after query 105: 0.7200
+test Accuracy after query 105: 0.4868
+Val Accuracy after query 110: 0.7500
+test Accuracy after query 110: 0.4898
+Val Accuracy after query 115: 0.7500
+test Accuracy after query 115: 0.4956
+Val Accuracy after query 120: 0.7700
+test Accuracy after query 120: 0.4973
+Val Accuracy after query 125: 0.7500
+test Accuracy after query 125: 0.5077
+Val Accuracy after query 130: 0.7700
+test Accuracy after query 130: 0.5203
+Val Accuracy after query 135: 0.7900
+test Accuracy after query 135: 0.5324
+Val Accuracy after query 140: 0.8200
+test Accuracy after query 140: 0.5349
+Val Accuracy after query 145: 0.7800
+test Accuracy after query 145: 0.5320
+Val Accuracy after query 150: 0.8100
+test Accuracy after query 150: 0.5261
+********** Test Accuracy per experiment: 0.5261396905060645 **********
+********** Experiment 2 (uniform-MC_dropout=True): 0:5:47 **********
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.2000
+test Accuracy after query 5: 0.1217
+Val Accuracy after query 10: 0.2500
+test Accuracy after query 10: 0.1556
+Val Accuracy after query 15: 0.3300
+test Accuracy after query 15: 0.1924
+Val Accuracy after query 20: 0.3600
+test Accuracy after query 20: 0.2171
+Val Accuracy after query 25: 0.4000
+test Accuracy after query 25: 0.2338
+Val Accuracy after query 30: 0.4300
+test Accuracy after query 30: 0.2576
+Val Accuracy after query 35: 0.4400
+test Accuracy after query 35: 0.2827
+Val Accuracy after query 40: 0.4600
+test Accuracy after query 40: 0.3041
+Val Accuracy after query 45: 0.5000
+test Accuracy after query 45: 0.3296
+Val Accuracy after query 50: 0.5500
+test Accuracy after query 50: 0.3530
+Val Accuracy after query 55: 0.5400
+test Accuracy after query 55: 0.3660
+Val Accuracy after query 60: 0.5900
+test Accuracy after query 60: 0.3831
+Val Accuracy after query 65: 0.6000
+test Accuracy after query 65: 0.3915
+Val Accuracy after query 70: 0.6400
+test Accuracy after query 70: 0.4124
+Val Accuracy after query 75: 0.6300
+test Accuracy after query 75: 0.4220
+Val Accuracy after query 80: 0.6500
+test Accuracy after query 80: 0.4312
+Val Accuracy after query 85: 0.6900
+test Accuracy after query 85: 0.4454
+Val Accuracy after query 90: 0.7100
+test Accuracy after query 90: 0.4575
+Val Accuracy after query 95: 0.7300
+test Accuracy after query 95: 0.4592
+Val Accuracy after query 100: 0.7500
+test Accuracy after query 100: 0.4793
+Val Accuracy after query 105: 0.7400
+test Accuracy after query 105: 0.4822
+Val Accuracy after query 110: 0.7300
+test Accuracy after query 110: 0.4877
+Val Accuracy after query 115: 0.7300
+test Accuracy after query 115: 0.4847
+Val Accuracy after query 120: 0.7600
+test Accuracy after query 120: 0.5102
+Val Accuracy after query 125: 0.7600
+test Accuracy after query 125: 0.5065
+Val Accuracy after query 130: 0.7800
+test Accuracy after query 130: 0.5182
+Val Accuracy after query 135: 0.7900
+test Accuracy after query 135: 0.5266
+Val Accuracy after query 140: 0.7800
+test Accuracy after query 140: 0.5341
+Val Accuracy after query 145: 0.7600
+test Accuracy after query 145: 0.5228
+Val Accuracy after query 150: 0.7900
+test Accuracy after query 150: 0.5429
+********** Test Accuracy per experiment: 0.5428690924299456 **********
+********** Experiment 3 (uniform-MC_dropout=True): 0:5:38 **********
+Average Test score for uniform-MC_dropout=True: 0.5386867419489754
+
+---------- Start max_entropy-MC_dropout=True training! ----------
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.2100
+test Accuracy after query 5: 0.1255
+Val Accuracy after query 10: 0.2000
+test Accuracy after query 10: 0.1468
+Val Accuracy after query 15: 0.2700
+test Accuracy after query 15: 0.1677
+Val Accuracy after query 20: 0.3400
+test Accuracy after query 20: 0.1895
+Val Accuracy after query 25: 0.3800
+test Accuracy after query 25: 0.2095
+Val Accuracy after query 30: 0.4200
+test Accuracy after query 30: 0.2325
+Val Accuracy after query 35: 0.4600
+test Accuracy after query 35: 0.2681
+Val Accuracy after query 40: 0.4900
+test Accuracy after query 40: 0.2831
+Val Accuracy after query 45: 0.4900
+test Accuracy after query 45: 0.3045
+Val Accuracy after query 50: 0.5200
+test Accuracy after query 50: 0.3237
+Val Accuracy after query 55: 0.5400
+test Accuracy after query 55: 0.3442
+Val Accuracy after query 60: 0.5500
+test Accuracy after query 60: 0.3718
+Val Accuracy after query 65: 0.5900
+test Accuracy after query 65: 0.3856
+Val Accuracy after query 70: 0.6000
+test Accuracy after query 70: 0.4049
+Val Accuracy after query 75: 0.6400
+test Accuracy after query 75: 0.4295
+Val Accuracy after query 80: 0.6400
+test Accuracy after query 80: 0.4534
+Val Accuracy after query 85: 0.6800
+test Accuracy after query 85: 0.4693
+Val Accuracy after query 90: 0.7000
+test Accuracy after query 90: 0.4927
+Val Accuracy after query 95: 0.7200
+test Accuracy after query 95: 0.5006
+Val Accuracy after query 100: 0.7200
+test Accuracy after query 100: 0.5169
+Val Accuracy after query 105: 0.7500
+test Accuracy after query 105: 0.5332
+Val Accuracy after query 110: 0.7800
+test Accuracy after query 110: 0.5517
+Val Accuracy after query 115: 0.7900
+test Accuracy after query 115: 0.5671
+Val Accuracy after query 120: 0.8000
+test Accuracy after query 120: 0.5851
+Val Accuracy after query 125: 0.8100
+test Accuracy after query 125: 0.5968
+Val Accuracy after query 130: 0.8000
+test Accuracy after query 130: 0.6010
+Val Accuracy after query 135: 0.8100
+test Accuracy after query 135: 0.6073
+Val Accuracy after query 140: 0.8200
+test Accuracy after query 140: 0.6202
+Val Accuracy after query 145: 0.8000
+test Accuracy after query 145: 0.6315
+Val Accuracy after query 150: 0.7900
+test Accuracy after query 150: 0.6432
+********** Test Accuracy per experiment: 0.643245503973233 **********
+********** Experiment 1 (max_entropy-MC_dropout=True): 0:28:26 **********
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.1700
+test Accuracy after query 5: 0.1242
+Val Accuracy after query 10: 0.2000
+test Accuracy after query 10: 0.1409
+Val Accuracy after query 15: 0.2400
+test Accuracy after query 15: 0.1648
+Val Accuracy after query 20: 0.2700
+test Accuracy after query 20: 0.1907
+Val Accuracy after query 25: 0.3000
+test Accuracy after query 25: 0.2125
+Val Accuracy after query 30: 0.2900
+test Accuracy after query 30: 0.2371
+Val Accuracy after query 35: 0.3200
+test Accuracy after query 35: 0.2509
+Val Accuracy after query 40: 0.3600
+test Accuracy after query 40: 0.2802
+Val Accuracy after query 45: 0.4100
+test Accuracy after query 45: 0.3158
+Val Accuracy after query 50: 0.4500
+test Accuracy after query 50: 0.3241
+Val Accuracy after query 55: 0.4600
+test Accuracy after query 55: 0.3367
+Val Accuracy after query 60: 0.4900
+test Accuracy after query 60: 0.3634
+Val Accuracy after query 65: 0.5000
+test Accuracy after query 65: 0.3890
+Val Accuracy after query 70: 0.5900
+test Accuracy after query 70: 0.4124
+Val Accuracy after query 75: 0.5900
+test Accuracy after query 75: 0.4316
+Val Accuracy after query 80: 0.6300
+test Accuracy after query 80: 0.4391
+Val Accuracy after query 85: 0.6400
+test Accuracy after query 85: 0.4534
+Val Accuracy after query 90: 0.6000
+test Accuracy after query 90: 0.4688
+Val Accuracy after query 95: 0.6700
+test Accuracy after query 95: 0.4847
+Val Accuracy after query 100: 0.6400
+test Accuracy after query 100: 0.4964
+Val Accuracy after query 105: 0.6800
+test Accuracy after query 105: 0.5140
+Val Accuracy after query 110: 0.7200
+test Accuracy after query 110: 0.5320
+Val Accuracy after query 115: 0.7400
+test Accuracy after query 115: 0.5491
+Val Accuracy after query 120: 0.7600
+test Accuracy after query 120: 0.5571
+Val Accuracy after query 125: 0.7700
+test Accuracy after query 125: 0.5868
+Val Accuracy after query 130: 0.7800
+test Accuracy after query 130: 0.5956
+Val Accuracy after query 135: 0.7800
+test Accuracy after query 135: 0.5989
+Val Accuracy after query 140: 0.7900
+test Accuracy after query 140: 0.5989
+Val Accuracy after query 145: 0.7900
+test Accuracy after query 145: 0.6098
+Val Accuracy after query 150: 0.7900
+test Accuracy after query 150: 0.6207
+********** Test Accuracy per experiment: 0.6206608113759933 **********
+********** Experiment 2 (max_entropy-MC_dropout=True): 0:28:3 **********
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.2000
+test Accuracy after query 5: 0.1125
+Val Accuracy after query 10: 0.2100
+test Accuracy after query 10: 0.1355
+Val Accuracy after query 15: 0.2500
+test Accuracy after query 15: 0.1660
+Val Accuracy after query 20: 0.3300
+test Accuracy after query 20: 0.1966
+Val Accuracy after query 25: 0.3700
+test Accuracy after query 25: 0.2271
+Val Accuracy after query 30: 0.3900
+test Accuracy after query 30: 0.2522
+Val Accuracy after query 35: 0.3900
+test Accuracy after query 35: 0.2723
+Val Accuracy after query 40: 0.4000
+test Accuracy after query 40: 0.2840
+Val Accuracy after query 45: 0.5000
+test Accuracy after query 45: 0.3053
+Val Accuracy after query 50: 0.4800
+test Accuracy after query 50: 0.3170
+Val Accuracy after query 55: 0.5000
+test Accuracy after query 55: 0.3396
+Val Accuracy after query 60: 0.5100
+test Accuracy after query 60: 0.3614
+Val Accuracy after query 65: 0.5900
+test Accuracy after query 65: 0.3873
+Val Accuracy after query 70: 0.5700
+test Accuracy after query 70: 0.4015
+Val Accuracy after query 75: 0.5900
+test Accuracy after query 75: 0.4237
+Val Accuracy after query 80: 0.5700
+test Accuracy after query 80: 0.4337
+Val Accuracy after query 85: 0.6300
+test Accuracy after query 85: 0.4521
+Val Accuracy after query 90: 0.6300
+test Accuracy after query 90: 0.4638
+Val Accuracy after query 95: 0.6700
+test Accuracy after query 95: 0.4898
+Val Accuracy after query 100: 0.7100
+test Accuracy after query 100: 0.4969
+Val Accuracy after query 105: 0.7600
+test Accuracy after query 105: 0.5190
+Val Accuracy after query 110: 0.7400
+test Accuracy after query 110: 0.5207
+Val Accuracy after query 115: 0.7700
+test Accuracy after query 115: 0.5379
+Val Accuracy after query 120: 0.7600
+test Accuracy after query 120: 0.5629
+Val Accuracy after query 125: 0.7500
+test Accuracy after query 125: 0.5638
+Val Accuracy after query 130: 0.8100
+test Accuracy after query 130: 0.5755
+Val Accuracy after query 135: 0.7700
+test Accuracy after query 135: 0.5935
+Val Accuracy after query 140: 0.8100
+test Accuracy after query 140: 0.5943
+Val Accuracy after query 145: 0.8400
+test Accuracy after query 145: 0.5997
+Val Accuracy after query 150: 0.8200
+test Accuracy after query 150: 0.6127
+********** Test Accuracy per experiment: 0.6127143454621498 **********
+********** Experiment 3 (max_entropy-MC_dropout=True): 0:27:32 **********
+Average Test score for max_entropy-MC_dropout=True: 0.6255402202704586
+
+---------- Start bald-MC_dropout=True training! ----------
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.1600
+test Accuracy after query 5: 0.1246
+Val Accuracy after query 10: 0.1700
+test Accuracy after query 10: 0.1435
+Val Accuracy after query 15: 0.2600
+test Accuracy after query 15: 0.1727
+Val Accuracy after query 20: 0.3000
+test Accuracy after query 20: 0.1982
+Val Accuracy after query 25: 0.3900
+test Accuracy after query 25: 0.2271
+Val Accuracy after query 30: 0.3700
+test Accuracy after query 30: 0.2480
+Val Accuracy after query 35: 0.4600
+test Accuracy after query 35: 0.2693
+Val Accuracy after query 40: 0.4400
+test Accuracy after query 40: 0.2919
+Val Accuracy after query 45: 0.4600
+test Accuracy after query 45: 0.3179
+Val Accuracy after query 50: 0.4900
+test Accuracy after query 50: 0.3450
+Val Accuracy after query 55: 0.5000
+test Accuracy after query 55: 0.3563
+Val Accuracy after query 60: 0.5400
+test Accuracy after query 60: 0.3798
+Val Accuracy after query 65: 0.5700
+test Accuracy after query 65: 0.3998
+Val Accuracy after query 70: 0.6000
+test Accuracy after query 70: 0.4145
+Val Accuracy after query 75: 0.6100
+test Accuracy after query 75: 0.4233
+Val Accuracy after query 80: 0.6400
+test Accuracy after query 80: 0.4354
+Val Accuracy after query 85: 0.6700
+test Accuracy after query 85: 0.4563
+Val Accuracy after query 90: 0.6500
+test Accuracy after query 90: 0.4768
+Val Accuracy after query 95: 0.7000
+test Accuracy after query 95: 0.4990
+Val Accuracy after query 100: 0.6700
+test Accuracy after query 100: 0.5094
+Val Accuracy after query 105: 0.7400
+test Accuracy after query 105: 0.5383
+Val Accuracy after query 110: 0.7000
+test Accuracy after query 110: 0.5454
+Val Accuracy after query 115: 0.7200
+test Accuracy after query 115: 0.5475
+Val Accuracy after query 120: 0.7600
+test Accuracy after query 120: 0.5680
+Val Accuracy after query 125: 0.7500
+test Accuracy after query 125: 0.5738
+Val Accuracy after query 130: 0.7400
+test Accuracy after query 130: 0.5855
+Val Accuracy after query 135: 0.7900
+test Accuracy after query 135: 0.5960
+Val Accuracy after query 140: 0.7900
+test Accuracy after query 140: 0.6064
+Val Accuracy after query 145: 0.8200
+test Accuracy after query 145: 0.6148
+Val Accuracy after query 150: 0.7600
+test Accuracy after query 150: 0.6119
+********** Test Accuracy per experiment: 0.6118778753659556 **********
+********** Experiment 1 (bald-MC_dropout=True): 0:28:54 **********
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.1900
+test Accuracy after query 5: 0.1242
+Val Accuracy after query 10: 0.2200
+test Accuracy after query 10: 0.1497
+Val Accuracy after query 15: 0.2400
+test Accuracy after query 15: 0.1777
+Val Accuracy after query 20: 0.3000
+test Accuracy after query 20: 0.2133
+Val Accuracy after query 25: 0.3700
+test Accuracy after query 25: 0.2371
+Val Accuracy after query 30: 0.3800
+test Accuracy after query 30: 0.2777
+Val Accuracy after query 35: 0.4000
+test Accuracy after query 35: 0.3074
+Val Accuracy after query 40: 0.4600
+test Accuracy after query 40: 0.3287
+Val Accuracy after query 45: 0.4500
+test Accuracy after query 45: 0.3563
+Val Accuracy after query 50: 0.4600
+test Accuracy after query 50: 0.3793
+Val Accuracy after query 55: 0.5400
+test Accuracy after query 55: 0.4049
+Val Accuracy after query 60: 0.5600
+test Accuracy after query 60: 0.4270
+Val Accuracy after query 65: 0.5600
+test Accuracy after query 65: 0.4383
+Val Accuracy after query 70: 0.6200
+test Accuracy after query 70: 0.4626
+Val Accuracy after query 75: 0.6400
+test Accuracy after query 75: 0.4831
+Val Accuracy after query 80: 0.6700
+test Accuracy after query 80: 0.5048
+Val Accuracy after query 85: 0.6700
+test Accuracy after query 85: 0.5132
+Val Accuracy after query 90: 0.6700
+test Accuracy after query 90: 0.5153
+Val Accuracy after query 95: 0.7200
+test Accuracy after query 95: 0.5299
+Val Accuracy after query 100: 0.7700
+test Accuracy after query 100: 0.5609
+Val Accuracy after query 105: 0.7500
+test Accuracy after query 105: 0.5655
+Val Accuracy after query 110: 0.7800
+test Accuracy after query 110: 0.5688
+Val Accuracy after query 115: 0.7800
+test Accuracy after query 115: 0.5859
+Val Accuracy after query 120: 0.7900
+test Accuracy after query 120: 0.6060
+Val Accuracy after query 125: 0.7800
+test Accuracy after query 125: 0.6106
+Val Accuracy after query 130: 0.7800
+test Accuracy after query 130: 0.6286
+Val Accuracy after query 135: 0.8000
+test Accuracy after query 135: 0.6361
+Val Accuracy after query 140: 0.8100
+test Accuracy after query 140: 0.6290
+Val Accuracy after query 145: 0.8200
+test Accuracy after query 145: 0.6428
+Val Accuracy after query 150: 0.8300
+test Accuracy after query 150: 0.6453
+********** Test Accuracy per experiment: 0.6453366792137181 **********
+********** Experiment 2 (bald-MC_dropout=True): 0:28:15 **********
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.1200
+test Accuracy after query 5: 0.1238
+Val Accuracy after query 10: 0.2000
+test Accuracy after query 10: 0.1468
+Val Accuracy after query 15: 0.2800
+test Accuracy after query 15: 0.1878
+Val Accuracy after query 20: 0.3300
+test Accuracy after query 20: 0.2028
+Val Accuracy after query 25: 0.3400
+test Accuracy after query 25: 0.2417
+Val Accuracy after query 30: 0.3500
+test Accuracy after query 30: 0.2710
+Val Accuracy after query 35: 0.4000
+test Accuracy after query 35: 0.3045
+Val Accuracy after query 40: 0.4700
+test Accuracy after query 40: 0.3162
+Val Accuracy after query 45: 0.5000
+test Accuracy after query 45: 0.3430
+Val Accuracy after query 50: 0.5300
+test Accuracy after query 50: 0.3655
+Val Accuracy after query 55: 0.5000
+test Accuracy after query 55: 0.3890
+Val Accuracy after query 60: 0.5300
+test Accuracy after query 60: 0.3990
+Val Accuracy after query 65: 0.6100
+test Accuracy after query 65: 0.4391
+Val Accuracy after query 70: 0.5800
+test Accuracy after query 70: 0.4421
+Val Accuracy after query 75: 0.6600
+test Accuracy after query 75: 0.4705
+Val Accuracy after query 80: 0.6500
+test Accuracy after query 80: 0.4734
+Val Accuracy after query 85: 0.6800
+test Accuracy after query 85: 0.4944
+Val Accuracy after query 90: 0.7000
+test Accuracy after query 90: 0.4898
+Val Accuracy after query 95: 0.7200
+test Accuracy after query 95: 0.5077
+Val Accuracy after query 100: 0.7500
+test Accuracy after query 100: 0.5266
+Val Accuracy after query 105: 0.7700
+test Accuracy after query 105: 0.5445
+Val Accuracy after query 110: 0.7500
+test Accuracy after query 110: 0.5558
+Val Accuracy after query 115: 0.7500
+test Accuracy after query 115: 0.5634
+Val Accuracy after query 120: 0.7300
+test Accuracy after query 120: 0.5839
+Val Accuracy after query 125: 0.7700
+test Accuracy after query 125: 0.5818
+Val Accuracy after query 130: 0.8100
+test Accuracy after query 130: 0.5964
+Val Accuracy after query 135: 0.8300
+test Accuracy after query 135: 0.6110
+Val Accuracy after query 140: 0.8100
+test Accuracy after query 140: 0.6211
+Val Accuracy after query 145: 0.8000
+test Accuracy after query 145: 0.6236
+Val Accuracy after query 150: 0.8500
+test Accuracy after query 150: 0.6328
+********** Test Accuracy per experiment: 0.6327896277708072 **********
+********** Experiment 3 (bald-MC_dropout=True): 0:28:34 **********
+Average Test score for bald-MC_dropout=True: 0.6300013941168269
+
+---------- Start var_ratios-MC_dropout=True training! ----------
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.1600
+test Accuracy after query 5: 0.1259
+Val Accuracy after query 10: 0.1800
+test Accuracy after query 10: 0.1522
+Val Accuracy after query 15: 0.2400
+test Accuracy after query 15: 0.1736
+Val Accuracy after query 20: 0.2500
+test Accuracy after query 20: 0.2008
+Val Accuracy after query 25: 0.3400
+test Accuracy after query 25: 0.2221
+Val Accuracy after query 30: 0.3900
+test Accuracy after query 30: 0.2484
+Val Accuracy after query 35: 0.3800
+test Accuracy after query 35: 0.2702
+Val Accuracy after query 40: 0.4700
+test Accuracy after query 40: 0.3057
+Val Accuracy after query 45: 0.5100
+test Accuracy after query 45: 0.3262
+Val Accuracy after query 50: 0.5600
+test Accuracy after query 50: 0.3614
+Val Accuracy after query 55: 0.5900
+test Accuracy after query 55: 0.3894
+Val Accuracy after query 60: 0.6000
+test Accuracy after query 60: 0.4053
+Val Accuracy after query 65: 0.6100
+test Accuracy after query 65: 0.4287
+Val Accuracy after query 70: 0.6600
+test Accuracy after query 70: 0.4467
+Val Accuracy after query 75: 0.6500
+test Accuracy after query 75: 0.4559
+Val Accuracy after query 80: 0.7000
+test Accuracy after query 80: 0.4885
+Val Accuracy after query 85: 0.7300
+test Accuracy after query 85: 0.4952
+Val Accuracy after query 90: 0.7500
+test Accuracy after query 90: 0.5036
+Val Accuracy after query 95: 0.7400
+test Accuracy after query 95: 0.5203
+Val Accuracy after query 100: 0.7200
+test Accuracy after query 100: 0.5366
+Val Accuracy after query 105: 0.7900
+test Accuracy after query 105: 0.5617
+Val Accuracy after query 110: 0.7800
+test Accuracy after query 110: 0.5805
+Val Accuracy after query 115: 0.8000
+test Accuracy after query 115: 0.5755
+Val Accuracy after query 120: 0.8100
+test Accuracy after query 120: 0.6069
+Val Accuracy after query 125: 0.8000
+test Accuracy after query 125: 0.6077
+Val Accuracy after query 130: 0.8200
+test Accuracy after query 130: 0.6182
+Val Accuracy after query 135: 0.7900
+test Accuracy after query 135: 0.6320
+Val Accuracy after query 140: 0.8700
+test Accuracy after query 140: 0.6474
+Val Accuracy after query 145: 0.8500
+test Accuracy after query 145: 0.6491
+Val Accuracy after query 150: 0.8500
+test Accuracy after query 150: 0.6566
+********** Test Accuracy per experiment: 0.6566290255123379 **********
+********** Experiment 1 (var_ratios-MC_dropout=True): 0:28:24 **********
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.1800
+test Accuracy after query 5: 0.1284
+Val Accuracy after query 10: 0.1600
+test Accuracy after query 10: 0.1660
+Val Accuracy after query 15: 0.2200
+test Accuracy after query 15: 0.2033
+Val Accuracy after query 20: 0.3400
+test Accuracy after query 20: 0.2472
+Val Accuracy after query 25: 0.3400
+test Accuracy after query 25: 0.2501
+Val Accuracy after query 30: 0.4500
+test Accuracy after query 30: 0.2940
+Val Accuracy after query 35: 0.4800
+test Accuracy after query 35: 0.3296
+Val Accuracy after query 40: 0.5000
+test Accuracy after query 40: 0.3538
+Val Accuracy after query 45: 0.5500
+test Accuracy after query 45: 0.3697
+Val Accuracy after query 50: 0.5900
+test Accuracy after query 50: 0.3864
+Val Accuracy after query 55: 0.5800
+test Accuracy after query 55: 0.4090
+Val Accuracy after query 60: 0.6100
+test Accuracy after query 60: 0.4136
+Val Accuracy after query 65: 0.6400
+test Accuracy after query 65: 0.4442
+Val Accuracy after query 70: 0.6300
+test Accuracy after query 70: 0.4571
+Val Accuracy after query 75: 0.7100
+test Accuracy after query 75: 0.4722
+Val Accuracy after query 80: 0.7000
+test Accuracy after query 80: 0.4952
+Val Accuracy after query 85: 0.7000
+test Accuracy after query 85: 0.5157
+Val Accuracy after query 90: 0.7200
+test Accuracy after query 90: 0.5286
+Val Accuracy after query 95: 0.7300
+test Accuracy after query 95: 0.5445
+Val Accuracy after query 100: 0.7600
+test Accuracy after query 100: 0.5537
+Val Accuracy after query 105: 0.7300
+test Accuracy after query 105: 0.5793
+Val Accuracy after query 110: 0.7500
+test Accuracy after query 110: 0.5918
+Val Accuracy after query 115: 0.7500
+test Accuracy after query 115: 0.6152
+Val Accuracy after query 120: 0.7700
+test Accuracy after query 120: 0.6198
+Val Accuracy after query 125: 0.7700
+test Accuracy after query 125: 0.6274
+Val Accuracy after query 130: 0.8000
+test Accuracy after query 130: 0.6416
+Val Accuracy after query 135: 0.8100
+test Accuracy after query 135: 0.6407
+Val Accuracy after query 140: 0.7900
+test Accuracy after query 140: 0.6432
+Val Accuracy after query 145: 0.8300
+test Accuracy after query 145: 0.6616
+Val Accuracy after query 150: 0.8200
+test Accuracy after query 150: 0.6642
+********** Test Accuracy per experiment: 0.6641572563780845 **********
+********** Experiment 2 (var_ratios-MC_dropout=True): 0:28:42 **********
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.2300
+test Accuracy after query 5: 0.1142
+Val Accuracy after query 10: 0.2700
+test Accuracy after query 10: 0.1481
+Val Accuracy after query 15: 0.3000
+test Accuracy after query 15: 0.1685
+Val Accuracy after query 20: 0.3700
+test Accuracy after query 20: 0.2041
+Val Accuracy after query 25: 0.4300
+test Accuracy after query 25: 0.2493
+Val Accuracy after query 30: 0.4700
+test Accuracy after query 30: 0.2719
+Val Accuracy after query 35: 0.4800
+test Accuracy after query 35: 0.3020
+Val Accuracy after query 40: 0.5400
+test Accuracy after query 40: 0.3304
+Val Accuracy after query 45: 0.5900
+test Accuracy after query 45: 0.3526
+Val Accuracy after query 50: 0.5800
+test Accuracy after query 50: 0.3597
+Val Accuracy after query 55: 0.5700
+test Accuracy after query 55: 0.3856
+Val Accuracy after query 60: 0.6800
+test Accuracy after query 60: 0.4057
+Val Accuracy after query 65: 0.7000
+test Accuracy after query 65: 0.4371
+Val Accuracy after query 70: 0.7000
+test Accuracy after query 70: 0.4563
+Val Accuracy after query 75: 0.7400
+test Accuracy after query 75: 0.4793
+Val Accuracy after query 80: 0.7700
+test Accuracy after query 80: 0.5040
+Val Accuracy after query 85: 0.7700
+test Accuracy after query 85: 0.5086
+Val Accuracy after query 90: 0.8100
+test Accuracy after query 90: 0.5328
+Val Accuracy after query 95: 0.8400
+test Accuracy after query 95: 0.5458
+Val Accuracy after query 100: 0.8500
+test Accuracy after query 100: 0.5491
+Val Accuracy after query 105: 0.8300
+test Accuracy after query 105: 0.5575
+Val Accuracy after query 110: 0.8300
+test Accuracy after query 110: 0.5705
+Val Accuracy after query 115: 0.8500
+test Accuracy after query 115: 0.5801
+Val Accuracy after query 120: 0.8300
+test Accuracy after query 120: 0.5956
+Val Accuracy after query 125: 0.8600
+test Accuracy after query 125: 0.6077
+Val Accuracy after query 130: 0.8600
+test Accuracy after query 130: 0.6169
+Val Accuracy after query 135: 0.9100
+test Accuracy after query 135: 0.6294
+Val Accuracy after query 140: 0.9000
+test Accuracy after query 140: 0.6353
+Val Accuracy after query 145: 0.8800
+test Accuracy after query 145: 0.6420
+Val Accuracy after query 150: 0.8900
+test Accuracy after query 150: 0.6424
+********** Test Accuracy per experiment: 0.6424090338770388 **********
+********** Experiment 3 (var_ratios-MC_dropout=True): 0:29:21 **********
+Average Test score for var_ratios-MC_dropout=True: 0.6543984385891538
+
+---------- Start mean_std-MC_dropout=True training! ----------
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.1600
+test Accuracy after query 5: 0.1184
+Val Accuracy after query 10: 0.2300
+test Accuracy after query 10: 0.1564
+Val Accuracy after query 15: 0.2600
+test Accuracy after query 15: 0.1861
+Val Accuracy after query 20: 0.3300
+test Accuracy after query 20: 0.2146
+Val Accuracy after query 25: 0.3900
+test Accuracy after query 25: 0.2551
+Val Accuracy after query 30: 0.4500
+test Accuracy after query 30: 0.2806
+Val Accuracy after query 35: 0.4600
+test Accuracy after query 35: 0.3028
+Val Accuracy after query 40: 0.5100
+test Accuracy after query 40: 0.3296
+Val Accuracy after query 45: 0.5400
+test Accuracy after query 45: 0.3555
+Val Accuracy after query 50: 0.5600
+test Accuracy after query 50: 0.3760
+Val Accuracy after query 55: 0.6000
+test Accuracy after query 55: 0.3998
+Val Accuracy after query 60: 0.6300
+test Accuracy after query 60: 0.4170
+Val Accuracy after query 65: 0.6300
+test Accuracy after query 65: 0.4400
+Val Accuracy after query 70: 0.6500
+test Accuracy after query 70: 0.4529
+Val Accuracy after query 75: 0.6300
+test Accuracy after query 75: 0.4676
+Val Accuracy after query 80: 0.6700
+test Accuracy after query 80: 0.5036
+Val Accuracy after query 85: 0.6600
+test Accuracy after query 85: 0.5069
+Val Accuracy after query 90: 0.6900
+test Accuracy after query 90: 0.5203
+Val Accuracy after query 95: 0.7200
+test Accuracy after query 95: 0.5332
+Val Accuracy after query 100: 0.7100
+test Accuracy after query 100: 0.5328
+Val Accuracy after query 105: 0.7200
+test Accuracy after query 105: 0.5458
+Val Accuracy after query 110: 0.7300
+test Accuracy after query 110: 0.5529
+Val Accuracy after query 115: 0.7500
+test Accuracy after query 115: 0.5579
+Val Accuracy after query 120: 0.7000
+test Accuracy after query 120: 0.5684
+Val Accuracy after query 125: 0.7200
+test Accuracy after query 125: 0.5809
+Val Accuracy after query 130: 0.7200
+test Accuracy after query 130: 0.5905
+Val Accuracy after query 135: 0.7200
+test Accuracy after query 135: 0.6039
+Val Accuracy after query 140: 0.7700
+test Accuracy after query 140: 0.6173
+Val Accuracy after query 145: 0.7300
+test Accuracy after query 145: 0.6211
+Val Accuracy after query 150: 0.7500
+test Accuracy after query 150: 0.6345
+********** Test Accuracy per experiment: 0.6344625679631953 **********
+********** Experiment 1 (mean_std-MC_dropout=True): 0:27:44 **********
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.1600
+test Accuracy after query 5: 0.1305
+Val Accuracy after query 10: 0.1800
+test Accuracy after query 10: 0.1577
+Val Accuracy after query 15: 0.2700
+test Accuracy after query 15: 0.1995
+Val Accuracy after query 20: 0.3500
+test Accuracy after query 20: 0.2342
+Val Accuracy after query 25: 0.3700
+test Accuracy after query 25: 0.2568
+Val Accuracy after query 30: 0.4500
+test Accuracy after query 30: 0.2869
+Val Accuracy after query 35: 0.4200
+test Accuracy after query 35: 0.3057
+Val Accuracy after query 40: 0.4800
+test Accuracy after query 40: 0.3292
+Val Accuracy after query 45: 0.5600
+test Accuracy after query 45: 0.3522
+Val Accuracy after query 50: 0.5500
+test Accuracy after query 50: 0.3764
+Val Accuracy after query 55: 0.5500
+test Accuracy after query 55: 0.3860
+Val Accuracy after query 60: 0.5700
+test Accuracy after query 60: 0.4086
+Val Accuracy after query 65: 0.5900
+test Accuracy after query 65: 0.4224
+Val Accuracy after query 70: 0.6400
+test Accuracy after query 70: 0.4517
+Val Accuracy after query 75: 0.6300
+test Accuracy after query 75: 0.4596
+Val Accuracy after query 80: 0.6500
+test Accuracy after query 80: 0.4831
+Val Accuracy after query 85: 0.6700
+test Accuracy after query 85: 0.5015
+Val Accuracy after query 90: 0.7100
+test Accuracy after query 90: 0.5040
+Val Accuracy after query 95: 0.7300
+test Accuracy after query 95: 0.5337
+Val Accuracy after query 100: 0.6700
+test Accuracy after query 100: 0.5341
+Val Accuracy after query 105: 0.7700
+test Accuracy after query 105: 0.5479
+Val Accuracy after query 110: 0.7500
+test Accuracy after query 110: 0.5742
+Val Accuracy after query 115: 0.7700
+test Accuracy after query 115: 0.5755
+Val Accuracy after query 120: 0.7700
+test Accuracy after query 120: 0.5788
+Val Accuracy after query 125: 0.7800
+test Accuracy after query 125: 0.5905
+Val Accuracy after query 130: 0.8000
+test Accuracy after query 130: 0.6010
+Val Accuracy after query 135: 0.8000
+test Accuracy after query 135: 0.6110
+Val Accuracy after query 140: 0.8200
+test Accuracy after query 140: 0.6064
+Val Accuracy after query 145: 0.8100
+test Accuracy after query 145: 0.6311
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 8895799 ON r30n6 CANCELLED AT 2022-04-04T03:03:54 DUE TO TIME LIMIT ***
+slurmstepd: error: *** STEP 8895799.0 ON r30n6 CANCELLED AT 2022-04-04T03:03:54 DUE TO TIME LIMIT ***

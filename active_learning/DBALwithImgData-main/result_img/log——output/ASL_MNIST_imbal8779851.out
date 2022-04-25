@@ -1,0 +1,1265 @@
+/home/wangsh/DBALwithImgData-main/main.py:10: DeprecationWarning: Please use `gaussian_filter1d` from the `scipy.ndimage` namespace, the `scipy.ndimage.filters` namespace is deprecated.
+  from scipy.ndimage.filters import gaussian_filter1d
+Using device: cuda:0
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+np.where(self.y_train_All == i)[0] is:  (array([   4,   12,   25,   28,  132,  173,  205,  238,  266,  317,  380,
+        419,  431,  440,  456,  462,  521,  525,  566,  690,  699,  810,
+        826,  864,  887,  920,  947,  994, 1023, 1033, 1058, 1071, 1137,
+       1152, 1195, 1230, 1266, 1272, 1298, 1444, 1502, 1568, 1765, 1875,
+       1889, 1959, 1978, 1986, 1993, 2014, 2041, 2065, 2071, 2074, 2092,
+       2124, 2173, 2182, 2227, 2326, 2341, 2388, 2447, 2469, 2763, 2771,
+       2795, 2825, 2828, 2861, 2882, 2916, 3075, 3090, 3091, 3120, 3205,
+       3238, 3300, 3493, 3494, 3518, 3629, 3663, 3893, 3915, 3921, 3942,
+       3954, 3964, 3994, 4085, 4107, 4151, 4155, 4159, 4180, 4222, 4282,
+       4285, 4353, 4357, 4376, 4397, 4463, 4495, 4517, 4540, 4561, 4573,
+       4629, 4734, 4847, 4889, 4961]),)
+
+---------- Start uniform-MC_dropout=True training! ----------
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.4500
+test Accuracy after query 5: 0.3800
+Val Accuracy after query 10: 0.6000
+test Accuracy after query 10: 0.4778
+Val Accuracy after query 15: 0.6500
+test Accuracy after query 15: 0.4830
+Val Accuracy after query 20: 0.7000
+test Accuracy after query 20: 0.5338
+Val Accuracy after query 25: 0.7000
+test Accuracy after query 25: 0.5438
+Val Accuracy after query 30: 0.7600
+test Accuracy after query 30: 0.5904
+Val Accuracy after query 35: 0.8000
+test Accuracy after query 35: 0.6116
+Val Accuracy after query 40: 0.7900
+test Accuracy after query 40: 0.6578
+Val Accuracy after query 45: 0.7900
+test Accuracy after query 45: 0.6404
+Val Accuracy after query 50: 0.8100
+test Accuracy after query 50: 0.6688
+Val Accuracy after query 55: 0.8400
+test Accuracy after query 55: 0.6854
+Val Accuracy after query 60: 0.8600
+test Accuracy after query 60: 0.7054
+Val Accuracy after query 65: 0.8800
+test Accuracy after query 65: 0.7480
+Val Accuracy after query 70: 0.8900
+test Accuracy after query 70: 0.7418
+Val Accuracy after query 75: 0.9000
+test Accuracy after query 75: 0.7724
+Val Accuracy after query 80: 0.9300
+test Accuracy after query 80: 0.7752
+Val Accuracy after query 85: 0.9100
+test Accuracy after query 85: 0.7874
+Val Accuracy after query 90: 0.9400
+test Accuracy after query 90: 0.8040
+Val Accuracy after query 95: 0.9300
+test Accuracy after query 95: 0.8110
+Val Accuracy after query 100: 0.9400
+test Accuracy after query 100: 0.7928
+Val Accuracy after query 105: 0.9300
+test Accuracy after query 105: 0.8082
+Val Accuracy after query 110: 0.9400
+test Accuracy after query 110: 0.8072
+Val Accuracy after query 115: 0.9500
+test Accuracy after query 115: 0.8054
+Val Accuracy after query 120: 0.9300
+test Accuracy after query 120: 0.8206
+Val Accuracy after query 125: 0.9500
+test Accuracy after query 125: 0.8454
+Val Accuracy after query 130: 0.9600
+test Accuracy after query 130: 0.8216
+Val Accuracy after query 135: 0.9500
+test Accuracy after query 135: 0.8344
+Val Accuracy after query 140: 0.9400
+test Accuracy after query 140: 0.8332
+Val Accuracy after query 145: 0.9500
+test Accuracy after query 145: 0.8454
+Val Accuracy after query 150: 0.9500
+test Accuracy after query 150: 0.8474
+********** Test Accuracy per experiment: 0.8474 **********
+********** Experiment 1 (uniform-MC_dropout=True): 0:5:30 **********
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.3900
+test Accuracy after query 5: 0.3666
+Val Accuracy after query 10: 0.5000
+test Accuracy after query 10: 0.4216
+Val Accuracy after query 15: 0.5900
+test Accuracy after query 15: 0.5154
+Val Accuracy after query 20: 0.5900
+test Accuracy after query 20: 0.5262
+Val Accuracy after query 25: 0.6600
+test Accuracy after query 25: 0.5728
+Val Accuracy after query 30: 0.7100
+test Accuracy after query 30: 0.6298
+Val Accuracy after query 35: 0.8000
+test Accuracy after query 35: 0.6530
+Val Accuracy after query 40: 0.8200
+test Accuracy after query 40: 0.7218
+Val Accuracy after query 45: 0.8500
+test Accuracy after query 45: 0.7144
+Val Accuracy after query 50: 0.8700
+test Accuracy after query 50: 0.7228
+Val Accuracy after query 55: 0.8800
+test Accuracy after query 55: 0.7432
+Val Accuracy after query 60: 0.8700
+test Accuracy after query 60: 0.7520
+Val Accuracy after query 65: 0.8900
+test Accuracy after query 65: 0.7558
+Val Accuracy after query 70: 0.9200
+test Accuracy after query 70: 0.7608
+Val Accuracy after query 75: 0.9200
+test Accuracy after query 75: 0.7886
+Val Accuracy after query 80: 0.9000
+test Accuracy after query 80: 0.7822
+Val Accuracy after query 85: 0.9300
+test Accuracy after query 85: 0.8036
+Val Accuracy after query 90: 0.9000
+test Accuracy after query 90: 0.7680
+Val Accuracy after query 95: 0.9100
+test Accuracy after query 95: 0.7990
+Val Accuracy after query 100: 0.9000
+test Accuracy after query 100: 0.7816
+Val Accuracy after query 105: 0.9400
+test Accuracy after query 105: 0.8308
+Val Accuracy after query 110: 0.9300
+test Accuracy after query 110: 0.8106
+Val Accuracy after query 115: 0.9500
+test Accuracy after query 115: 0.8090
+Val Accuracy after query 120: 0.9300
+test Accuracy after query 120: 0.8278
+Val Accuracy after query 125: 0.9700
+test Accuracy after query 125: 0.8298
+Val Accuracy after query 130: 0.9500
+test Accuracy after query 130: 0.8324
+Val Accuracy after query 135: 0.9300
+test Accuracy after query 135: 0.8372
+Val Accuracy after query 140: 0.9500
+test Accuracy after query 140: 0.8512
+Val Accuracy after query 145: 0.9300
+test Accuracy after query 145: 0.8304
+Val Accuracy after query 150: 0.9400
+test Accuracy after query 150: 0.8334
+********** Test Accuracy per experiment: 0.8334 **********
+********** Experiment 2 (uniform-MC_dropout=True): 0:5:23 **********
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.4800
+test Accuracy after query 5: 0.4102
+Val Accuracy after query 10: 0.5900
+test Accuracy after query 10: 0.4398
+Val Accuracy after query 15: 0.6100
+test Accuracy after query 15: 0.5188
+Val Accuracy after query 20: 0.7300
+test Accuracy after query 20: 0.5738
+Val Accuracy after query 25: 0.7700
+test Accuracy after query 25: 0.6236
+Val Accuracy after query 30: 0.8300
+test Accuracy after query 30: 0.6320
+Val Accuracy after query 35: 0.8600
+test Accuracy after query 35: 0.6318
+Val Accuracy after query 40: 0.8700
+test Accuracy after query 40: 0.6422
+Val Accuracy after query 45: 0.8600
+test Accuracy after query 45: 0.6672
+Val Accuracy after query 50: 0.8600
+test Accuracy after query 50: 0.6716
+Val Accuracy after query 55: 0.8700
+test Accuracy after query 55: 0.6946
+Val Accuracy after query 60: 0.8700
+test Accuracy after query 60: 0.7026
+Val Accuracy after query 65: 0.9100
+test Accuracy after query 65: 0.7184
+Val Accuracy after query 70: 0.9000
+test Accuracy after query 70: 0.7358
+Val Accuracy after query 75: 0.9000
+test Accuracy after query 75: 0.7256
+Val Accuracy after query 80: 0.9100
+test Accuracy after query 80: 0.7430
+Val Accuracy after query 85: 0.9000
+test Accuracy after query 85: 0.7306
+Val Accuracy after query 90: 0.9200
+test Accuracy after query 90: 0.7694
+Val Accuracy after query 95: 0.9200
+test Accuracy after query 95: 0.7702
+Val Accuracy after query 100: 0.9400
+test Accuracy after query 100: 0.7656
+Val Accuracy after query 105: 0.9400
+test Accuracy after query 105: 0.7808
+Val Accuracy after query 110: 0.9400
+test Accuracy after query 110: 0.7754
+Val Accuracy after query 115: 0.9600
+test Accuracy after query 115: 0.7762
+Val Accuracy after query 120: 0.9700
+test Accuracy after query 120: 0.7682
+Val Accuracy after query 125: 0.9700
+test Accuracy after query 125: 0.8014
+Val Accuracy after query 130: 0.9700
+test Accuracy after query 130: 0.7868
+Val Accuracy after query 135: 0.9900
+test Accuracy after query 135: 0.8070
+Val Accuracy after query 140: 0.9700
+test Accuracy after query 140: 0.8058
+Val Accuracy after query 145: 0.9900
+test Accuracy after query 145: 0.8212
+Val Accuracy after query 150: 0.9700
+test Accuracy after query 150: 0.8168
+********** Test Accuracy per experiment: 0.8168 **********
+********** Experiment 3 (uniform-MC_dropout=True): 0:5:23 **********
+Average Test score for uniform-MC_dropout=True: 0.8325333333333335
+Saved: result_npy/uniform-MC_dropout=TrueASL_MNIST_imbal.npy
+
+---------- Start max_entropy-MC_dropout=True training! ----------
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.4700
+test Accuracy after query 5: 0.3848
+Val Accuracy after query 10: 0.5100
+test Accuracy after query 10: 0.4638
+Val Accuracy after query 15: 0.6000
+test Accuracy after query 15: 0.5298
+Val Accuracy after query 20: 0.6800
+test Accuracy after query 20: 0.5846
+Val Accuracy after query 25: 0.6600
+test Accuracy after query 25: 0.5886
+Val Accuracy after query 30: 0.7500
+test Accuracy after query 30: 0.6526
+Val Accuracy after query 35: 0.8400
+test Accuracy after query 35: 0.7342
+Val Accuracy after query 40: 0.9000
+test Accuracy after query 40: 0.7428
+Val Accuracy after query 45: 0.9200
+test Accuracy after query 45: 0.7794
+Val Accuracy after query 50: 0.9100
+test Accuracy after query 50: 0.8056
+Val Accuracy after query 55: 0.9500
+test Accuracy after query 55: 0.8274
+Val Accuracy after query 60: 0.9600
+test Accuracy after query 60: 0.8508
+Val Accuracy after query 65: 0.9600
+test Accuracy after query 65: 0.8594
+Val Accuracy after query 70: 0.9600
+test Accuracy after query 70: 0.8828
+Val Accuracy after query 75: 0.9600
+test Accuracy after query 75: 0.9038
+Val Accuracy after query 80: 0.9800
+test Accuracy after query 80: 0.9092
+Val Accuracy after query 85: 1.0000
+test Accuracy after query 85: 0.9206
+Val Accuracy after query 90: 0.9900
+test Accuracy after query 90: 0.9118
+Val Accuracy after query 95: 0.9900
+test Accuracy after query 95: 0.9144
+Val Accuracy after query 100: 0.9900
+test Accuracy after query 100: 0.9208
+Val Accuracy after query 105: 0.9900
+test Accuracy after query 105: 0.9140
+Val Accuracy after query 110: 0.9900
+test Accuracy after query 110: 0.9182
+Val Accuracy after query 115: 1.0000
+test Accuracy after query 115: 0.9194
+Val Accuracy after query 120: 0.9900
+test Accuracy after query 120: 0.9202
+Val Accuracy after query 125: 1.0000
+test Accuracy after query 125: 0.9296
+Val Accuracy after query 130: 0.9900
+test Accuracy after query 130: 0.9154
+Val Accuracy after query 135: 0.9900
+test Accuracy after query 135: 0.9160
+Val Accuracy after query 140: 0.9900
+test Accuracy after query 140: 0.9074
+Val Accuracy after query 145: 0.9900
+test Accuracy after query 145: 0.9120
+Val Accuracy after query 150: 0.9900
+test Accuracy after query 150: 0.9292
+********** Test Accuracy per experiment: 0.9292 **********
+********** Experiment 1 (max_entropy-MC_dropout=True): 0:25:37 **********
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.4100
+test Accuracy after query 5: 0.4186
+Val Accuracy after query 10: 0.5700
+test Accuracy after query 10: 0.4400
+Val Accuracy after query 15: 0.6000
+test Accuracy after query 15: 0.5546
+Val Accuracy after query 20: 0.7600
+test Accuracy after query 20: 0.6430
+Val Accuracy after query 25: 0.7600
+test Accuracy after query 25: 0.6898
+Val Accuracy after query 30: 0.8700
+test Accuracy after query 30: 0.7456
+Val Accuracy after query 35: 0.8300
+test Accuracy after query 35: 0.7870
+Val Accuracy after query 40: 0.8800
+test Accuracy after query 40: 0.7794
+Val Accuracy after query 45: 0.9300
+test Accuracy after query 45: 0.8180
+Val Accuracy after query 50: 0.9200
+test Accuracy after query 50: 0.8286
+Val Accuracy after query 55: 0.9700
+test Accuracy after query 55: 0.8516
+Val Accuracy after query 60: 0.9700
+test Accuracy after query 60: 0.8528
+Val Accuracy after query 65: 0.9800
+test Accuracy after query 65: 0.8746
+Val Accuracy after query 70: 0.9600
+test Accuracy after query 70: 0.8908
+Val Accuracy after query 75: 0.9600
+test Accuracy after query 75: 0.8820
+Val Accuracy after query 80: 0.9900
+test Accuracy after query 80: 0.9056
+Val Accuracy after query 85: 0.9900
+test Accuracy after query 85: 0.9030
+Val Accuracy after query 90: 0.9900
+test Accuracy after query 90: 0.9090
+Val Accuracy after query 95: 0.9900
+test Accuracy after query 95: 0.9168
+Val Accuracy after query 100: 0.9900
+test Accuracy after query 100: 0.9118
+Val Accuracy after query 105: 0.9900
+test Accuracy after query 105: 0.9174
+Val Accuracy after query 110: 0.9900
+test Accuracy after query 110: 0.9024
+Val Accuracy after query 115: 0.9900
+test Accuracy after query 115: 0.9144
+Val Accuracy after query 120: 0.9900
+test Accuracy after query 120: 0.9002
+Val Accuracy after query 125: 0.9900
+test Accuracy after query 125: 0.9134
+Val Accuracy after query 130: 0.9900
+test Accuracy after query 130: 0.9080
+Val Accuracy after query 135: 0.9900
+test Accuracy after query 135: 0.9100
+Val Accuracy after query 140: 0.9900
+test Accuracy after query 140: 0.9240
+Val Accuracy after query 145: 0.9900
+test Accuracy after query 145: 0.9052
+Val Accuracy after query 150: 0.9900
+test Accuracy after query 150: 0.9050
+********** Test Accuracy per experiment: 0.905 **********
+********** Experiment 2 (max_entropy-MC_dropout=True): 0:25:35 **********
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.4700
+test Accuracy after query 5: 0.4022
+Val Accuracy after query 10: 0.5400
+test Accuracy after query 10: 0.4158
+Val Accuracy after query 15: 0.6400
+test Accuracy after query 15: 0.5312
+Val Accuracy after query 20: 0.6100
+test Accuracy after query 20: 0.5868
+Val Accuracy after query 25: 0.7500
+test Accuracy after query 25: 0.6212
+Val Accuracy after query 30: 0.7800
+test Accuracy after query 30: 0.6728
+Val Accuracy after query 35: 0.8400
+test Accuracy after query 35: 0.6870
+Val Accuracy after query 40: 0.8500
+test Accuracy after query 40: 0.7618
+Val Accuracy after query 45: 0.9100
+test Accuracy after query 45: 0.7880
+Val Accuracy after query 50: 0.9200
+test Accuracy after query 50: 0.8192
+Val Accuracy after query 55: 0.9100
+test Accuracy after query 55: 0.8438
+Val Accuracy after query 60: 0.9900
+test Accuracy after query 60: 0.8686
+Val Accuracy after query 65: 0.9500
+test Accuracy after query 65: 0.8796
+Val Accuracy after query 70: 0.9800
+test Accuracy after query 70: 0.8750
+Val Accuracy after query 75: 0.9800
+test Accuracy after query 75: 0.8962
+Val Accuracy after query 80: 0.9800
+test Accuracy after query 80: 0.9140
+Val Accuracy after query 85: 0.9800
+test Accuracy after query 85: 0.9182
+Val Accuracy after query 90: 0.9900
+test Accuracy after query 90: 0.9240
+Val Accuracy after query 95: 0.9900
+test Accuracy after query 95: 0.9116
+Val Accuracy after query 100: 0.9900
+test Accuracy after query 100: 0.9170
+Val Accuracy after query 105: 0.9900
+test Accuracy after query 105: 0.9180
+Val Accuracy after query 110: 0.9800
+test Accuracy after query 110: 0.9330
+Val Accuracy after query 115: 1.0000
+test Accuracy after query 115: 0.9208
+Val Accuracy after query 120: 1.0000
+test Accuracy after query 120: 0.9276
+Val Accuracy after query 125: 0.9900
+test Accuracy after query 125: 0.9250
+Val Accuracy after query 130: 1.0000
+test Accuracy after query 130: 0.9198
+Val Accuracy after query 135: 1.0000
+test Accuracy after query 135: 0.9190
+Val Accuracy after query 140: 0.9900
+test Accuracy after query 140: 0.9238
+Val Accuracy after query 145: 1.0000
+test Accuracy after query 145: 0.9104
+Val Accuracy after query 150: 0.9900
+test Accuracy after query 150: 0.9100
+********** Test Accuracy per experiment: 0.91 **********
+********** Experiment 3 (max_entropy-MC_dropout=True): 0:25:33 **********
+Average Test score for max_entropy-MC_dropout=True: 0.9147333333333334
+Saved: result_npy/max_entropy-MC_dropout=TrueASL_MNIST_imbal.npy
+
+---------- Start bald-MC_dropout=True training! ----------
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.5200
+test Accuracy after query 5: 0.4200
+Val Accuracy after query 10: 0.6000
+test Accuracy after query 10: 0.4868
+Val Accuracy after query 15: 0.6400
+test Accuracy after query 15: 0.5586
+Val Accuracy after query 20: 0.7900
+test Accuracy after query 20: 0.6188
+Val Accuracy after query 25: 0.8100
+test Accuracy after query 25: 0.6582
+Val Accuracy after query 30: 0.8700
+test Accuracy after query 30: 0.7372
+Val Accuracy after query 35: 0.8600
+test Accuracy after query 35: 0.7540
+Val Accuracy after query 40: 0.8900
+test Accuracy after query 40: 0.7702
+Val Accuracy after query 45: 0.9100
+test Accuracy after query 45: 0.8184
+Val Accuracy after query 50: 0.9800
+test Accuracy after query 50: 0.8546
+Val Accuracy after query 55: 0.9700
+test Accuracy after query 55: 0.8754
+Val Accuracy after query 60: 0.9700
+test Accuracy after query 60: 0.8758
+Val Accuracy after query 65: 0.9900
+test Accuracy after query 65: 0.8990
+Val Accuracy after query 70: 0.9900
+test Accuracy after query 70: 0.9052
+Val Accuracy after query 75: 0.9900
+test Accuracy after query 75: 0.9158
+Val Accuracy after query 80: 1.0000
+test Accuracy after query 80: 0.9178
+Val Accuracy after query 85: 1.0000
+test Accuracy after query 85: 0.9234
+Val Accuracy after query 90: 1.0000
+test Accuracy after query 90: 0.9138
+Val Accuracy after query 95: 1.0000
+test Accuracy after query 95: 0.9148
+Val Accuracy after query 100: 0.9900
+test Accuracy after query 100: 0.9284
+Val Accuracy after query 105: 0.9900
+test Accuracy after query 105: 0.9146
+Val Accuracy after query 110: 0.9900
+test Accuracy after query 110: 0.9138
+Val Accuracy after query 115: 0.9900
+test Accuracy after query 115: 0.9248
+Val Accuracy after query 120: 0.9900
+test Accuracy after query 120: 0.9232
+Val Accuracy after query 125: 0.9900
+test Accuracy after query 125: 0.9220
+Val Accuracy after query 130: 1.0000
+test Accuracy after query 130: 0.9234
+Val Accuracy after query 135: 0.9900
+test Accuracy after query 135: 0.9146
+Val Accuracy after query 140: 1.0000
+test Accuracy after query 140: 0.9272
+Val Accuracy after query 145: 1.0000
+test Accuracy after query 145: 0.9174
+Val Accuracy after query 150: 0.9900
+test Accuracy after query 150: 0.9332
+********** Test Accuracy per experiment: 0.9332 **********
+********** Experiment 1 (bald-MC_dropout=True): 0:25:53 **********
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.4000
+test Accuracy after query 5: 0.4272
+Val Accuracy after query 10: 0.5900
+test Accuracy after query 10: 0.4884
+Val Accuracy after query 15: 0.6600
+test Accuracy after query 15: 0.5230
+Val Accuracy after query 20: 0.7200
+test Accuracy after query 20: 0.6314
+Val Accuracy after query 25: 0.8200
+test Accuracy after query 25: 0.6850
+Val Accuracy after query 30: 0.8700
+test Accuracy after query 30: 0.7102
+Val Accuracy after query 35: 0.8900
+test Accuracy after query 35: 0.7206
+Val Accuracy after query 40: 0.9200
+test Accuracy after query 40: 0.7334
+Val Accuracy after query 45: 0.9100
+test Accuracy after query 45: 0.7752
+Val Accuracy after query 50: 0.9400
+test Accuracy after query 50: 0.7942
+Val Accuracy after query 55: 0.9600
+test Accuracy after query 55: 0.8396
+Val Accuracy after query 60: 0.9700
+test Accuracy after query 60: 0.8574
+Val Accuracy after query 65: 0.9800
+test Accuracy after query 65: 0.8596
+Val Accuracy after query 70: 0.9800
+test Accuracy after query 70: 0.8874
+Val Accuracy after query 75: 0.9800
+test Accuracy after query 75: 0.8912
+Val Accuracy after query 80: 0.9900
+test Accuracy after query 80: 0.9012
+Val Accuracy after query 85: 1.0000
+test Accuracy after query 85: 0.9126
+Val Accuracy after query 90: 1.0000
+test Accuracy after query 90: 0.9080
+Val Accuracy after query 95: 1.0000
+test Accuracy after query 95: 0.9116
+Val Accuracy after query 100: 1.0000
+test Accuracy after query 100: 0.9028
+Val Accuracy after query 105: 1.0000
+test Accuracy after query 105: 0.9088
+Val Accuracy after query 110: 0.9900
+test Accuracy after query 110: 0.9032
+Val Accuracy after query 115: 0.9900
+test Accuracy after query 115: 0.9092
+Val Accuracy after query 120: 0.9900
+test Accuracy after query 120: 0.9212
+Val Accuracy after query 125: 0.9900
+test Accuracy after query 125: 0.9130
+Val Accuracy after query 130: 1.0000
+test Accuracy after query 130: 0.9184
+Val Accuracy after query 135: 0.9900
+test Accuracy after query 135: 0.8992
+Val Accuracy after query 140: 0.9900
+test Accuracy after query 140: 0.9176
+Val Accuracy after query 145: 0.9900
+test Accuracy after query 145: 0.9098
+Val Accuracy after query 150: 0.9900
+test Accuracy after query 150: 0.9274
+********** Test Accuracy per experiment: 0.9274 **********
+********** Experiment 2 (bald-MC_dropout=True): 0:25:53 **********
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.4500
+test Accuracy after query 5: 0.3538
+Val Accuracy after query 10: 0.4800
+test Accuracy after query 10: 0.4284
+Val Accuracy after query 15: 0.6300
+test Accuracy after query 15: 0.5392
+Val Accuracy after query 20: 0.6800
+test Accuracy after query 20: 0.6052
+Val Accuracy after query 25: 0.7500
+test Accuracy after query 25: 0.6556
+Val Accuracy after query 30: 0.8400
+test Accuracy after query 30: 0.6902
+Val Accuracy after query 35: 0.8700
+test Accuracy after query 35: 0.7426
+Val Accuracy after query 40: 0.9200
+test Accuracy after query 40: 0.8124
+Val Accuracy after query 45: 0.9400
+test Accuracy after query 45: 0.8030
+Val Accuracy after query 50: 0.9100
+test Accuracy after query 50: 0.8136
+Val Accuracy after query 55: 0.9400
+test Accuracy after query 55: 0.8450
+Val Accuracy after query 60: 0.9600
+test Accuracy after query 60: 0.8634
+Val Accuracy after query 65: 0.9800
+test Accuracy after query 65: 0.8840
+Val Accuracy after query 70: 0.9700
+test Accuracy after query 70: 0.9054
+Val Accuracy after query 75: 0.9700
+test Accuracy after query 75: 0.9088
+Val Accuracy after query 80: 0.9900
+test Accuracy after query 80: 0.9218
+Val Accuracy after query 85: 0.9900
+test Accuracy after query 85: 0.9230
+Val Accuracy after query 90: 0.9800
+test Accuracy after query 90: 0.9270
+Val Accuracy after query 95: 0.9800
+test Accuracy after query 95: 0.9212
+Val Accuracy after query 100: 1.0000
+test Accuracy after query 100: 0.9034
+Val Accuracy after query 105: 0.9800
+test Accuracy after query 105: 0.9256
+Val Accuracy after query 110: 0.9900
+test Accuracy after query 110: 0.9326
+Val Accuracy after query 115: 0.9800
+test Accuracy after query 115: 0.9252
+Val Accuracy after query 120: 0.9800
+test Accuracy after query 120: 0.9290
+Val Accuracy after query 125: 0.9800
+test Accuracy after query 125: 0.9272
+Val Accuracy after query 130: 0.9800
+test Accuracy after query 130: 0.9294
+Val Accuracy after query 135: 0.9800
+test Accuracy after query 135: 0.9348
+Val Accuracy after query 140: 0.9800
+test Accuracy after query 140: 0.9328
+Val Accuracy after query 145: 0.9800
+test Accuracy after query 145: 0.9312
+Val Accuracy after query 150: 0.9800
+test Accuracy after query 150: 0.9316
+********** Test Accuracy per experiment: 0.9316 **********
+********** Experiment 3 (bald-MC_dropout=True): 0:25:51 **********
+Average Test score for bald-MC_dropout=True: 0.9307333333333334
+Saved: result_npy/bald-MC_dropout=TrueASL_MNIST_imbal.npy
+
+---------- Start var_ratios-MC_dropout=True training! ----------
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.5200
+test Accuracy after query 5: 0.4548
+Val Accuracy after query 10: 0.5300
+test Accuracy after query 10: 0.4928
+Val Accuracy after query 15: 0.6800
+test Accuracy after query 15: 0.5616
+Val Accuracy after query 20: 0.7900
+test Accuracy after query 20: 0.6226
+Val Accuracy after query 25: 0.8100
+test Accuracy after query 25: 0.6680
+Val Accuracy after query 30: 0.8400
+test Accuracy after query 30: 0.7094
+Val Accuracy after query 35: 0.9100
+test Accuracy after query 35: 0.7452
+Val Accuracy after query 40: 0.9400
+test Accuracy after query 40: 0.7738
+Val Accuracy after query 45: 0.9400
+test Accuracy after query 45: 0.8034
+Val Accuracy after query 50: 0.9400
+test Accuracy after query 50: 0.8244
+Val Accuracy after query 55: 0.9600
+test Accuracy after query 55: 0.8444
+Val Accuracy after query 60: 0.9700
+test Accuracy after query 60: 0.8708
+Val Accuracy after query 65: 0.9700
+test Accuracy after query 65: 0.8798
+Val Accuracy after query 70: 0.9800
+test Accuracy after query 70: 0.8974
+Val Accuracy after query 75: 0.9800
+test Accuracy after query 75: 0.8914
+Val Accuracy after query 80: 0.9800
+test Accuracy after query 80: 0.9074
+Val Accuracy after query 85: 0.9900
+test Accuracy after query 85: 0.9014
+Val Accuracy after query 90: 0.9900
+test Accuracy after query 90: 0.9110
+Val Accuracy after query 95: 0.9900
+test Accuracy after query 95: 0.9084
+Val Accuracy after query 100: 0.9900
+test Accuracy after query 100: 0.9198
+Val Accuracy after query 105: 0.9900
+test Accuracy after query 105: 0.9026
+Val Accuracy after query 110: 0.9900
+test Accuracy after query 110: 0.9202
+Val Accuracy after query 115: 0.9900
+test Accuracy after query 115: 0.9142
+Val Accuracy after query 120: 1.0000
+test Accuracy after query 120: 0.9188
+Val Accuracy after query 125: 0.9900
+test Accuracy after query 125: 0.9130
+Val Accuracy after query 130: 0.9900
+test Accuracy after query 130: 0.9110
+Val Accuracy after query 135: 0.9900
+test Accuracy after query 135: 0.9222
+Val Accuracy after query 140: 1.0000
+test Accuracy after query 140: 0.9116
+Val Accuracy after query 145: 0.9900
+test Accuracy after query 145: 0.9156
+Val Accuracy after query 150: 1.0000
+test Accuracy after query 150: 0.9332
+********** Test Accuracy per experiment: 0.9332 **********
+********** Experiment 1 (var_ratios-MC_dropout=True): 0:25:55 **********
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.4700
+test Accuracy after query 5: 0.3872
+Val Accuracy after query 10: 0.5500
+test Accuracy after query 10: 0.4886
+Val Accuracy after query 15: 0.6800
+test Accuracy after query 15: 0.5526
+Val Accuracy after query 20: 0.7500
+test Accuracy after query 20: 0.6568
+Val Accuracy after query 25: 0.7800
+test Accuracy after query 25: 0.6974
+Val Accuracy after query 30: 0.8700
+test Accuracy after query 30: 0.7338
+Val Accuracy after query 35: 0.9100
+test Accuracy after query 35: 0.7594
+Val Accuracy after query 40: 0.9000
+test Accuracy after query 40: 0.7938
+Val Accuracy after query 45: 0.9300
+test Accuracy after query 45: 0.8186
+Val Accuracy after query 50: 0.9600
+test Accuracy after query 50: 0.8358
+Val Accuracy after query 55: 0.9700
+test Accuracy after query 55: 0.8482
+Val Accuracy after query 60: 0.9900
+test Accuracy after query 60: 0.8614
+Val Accuracy after query 65: 0.9900
+test Accuracy after query 65: 0.8814
+Val Accuracy after query 70: 0.9900
+test Accuracy after query 70: 0.8950
+Val Accuracy after query 75: 0.9900
+test Accuracy after query 75: 0.8830
+Val Accuracy after query 80: 0.9800
+test Accuracy after query 80: 0.8878
+Val Accuracy after query 85: 0.9900
+test Accuracy after query 85: 0.9120
+Val Accuracy after query 90: 0.9900
+test Accuracy after query 90: 0.9142
+Val Accuracy after query 95: 0.9800
+test Accuracy after query 95: 0.9102
+Val Accuracy after query 100: 0.9800
+test Accuracy after query 100: 0.9118
+Val Accuracy after query 105: 0.9900
+test Accuracy after query 105: 0.9208
+Val Accuracy after query 110: 1.0000
+test Accuracy after query 110: 0.9126
+Val Accuracy after query 115: 0.9900
+test Accuracy after query 115: 0.9160
+Val Accuracy after query 120: 0.9900
+test Accuracy after query 120: 0.9128
+Val Accuracy after query 125: 1.0000
+test Accuracy after query 125: 0.9152
+Val Accuracy after query 130: 0.9900
+test Accuracy after query 130: 0.9132
+Val Accuracy after query 135: 0.9900
+test Accuracy after query 135: 0.9122
+Val Accuracy after query 140: 0.9900
+test Accuracy after query 140: 0.9096
+Val Accuracy after query 145: 1.0000
+test Accuracy after query 145: 0.9046
+Val Accuracy after query 150: 0.9900
+test Accuracy after query 150: 0.9186
+********** Test Accuracy per experiment: 0.9186 **********
+********** Experiment 2 (var_ratios-MC_dropout=True): 0:25:52 **********
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.4300
+test Accuracy after query 5: 0.3686
+Val Accuracy after query 10: 0.5200
+test Accuracy after query 10: 0.4346
+Val Accuracy after query 15: 0.6100
+test Accuracy after query 15: 0.5198
+Val Accuracy after query 20: 0.6900
+test Accuracy after query 20: 0.5638
+Val Accuracy after query 25: 0.7900
+test Accuracy after query 25: 0.6402
+Val Accuracy after query 30: 0.8500
+test Accuracy after query 30: 0.6820
+Val Accuracy after query 35: 0.9100
+test Accuracy after query 35: 0.7222
+Val Accuracy after query 40: 0.9300
+test Accuracy after query 40: 0.7552
+Val Accuracy after query 45: 0.9300
+test Accuracy after query 45: 0.7952
+Val Accuracy after query 50: 0.9400
+test Accuracy after query 50: 0.8272
+Val Accuracy after query 55: 0.9300
+test Accuracy after query 55: 0.8494
+Val Accuracy after query 60: 0.9600
+test Accuracy after query 60: 0.8700
+Val Accuracy after query 65: 0.9500
+test Accuracy after query 65: 0.8686
+Val Accuracy after query 70: 0.9800
+test Accuracy after query 70: 0.8928
+Val Accuracy after query 75: 1.0000
+test Accuracy after query 75: 0.9054
+Val Accuracy after query 80: 1.0000
+test Accuracy after query 80: 0.9112
+Val Accuracy after query 85: 0.9900
+test Accuracy after query 85: 0.9094
+Val Accuracy after query 90: 1.0000
+test Accuracy after query 90: 0.9102
+Val Accuracy after query 95: 0.9900
+test Accuracy after query 95: 0.9094
+Val Accuracy after query 100: 1.0000
+test Accuracy after query 100: 0.9170
+Val Accuracy after query 105: 1.0000
+test Accuracy after query 105: 0.9060
+Val Accuracy after query 110: 0.9900
+test Accuracy after query 110: 0.9052
+Val Accuracy after query 115: 0.9900
+test Accuracy after query 115: 0.9120
+Val Accuracy after query 120: 0.9900
+test Accuracy after query 120: 0.9184
+Val Accuracy after query 125: 0.9900
+test Accuracy after query 125: 0.9052
+Val Accuracy after query 130: 0.9900
+test Accuracy after query 130: 0.9042
+Val Accuracy after query 135: 0.9900
+test Accuracy after query 135: 0.9182
+Val Accuracy after query 140: 0.9900
+test Accuracy after query 140: 0.9116
+Val Accuracy after query 145: 0.9900
+test Accuracy after query 145: 0.9034
+Val Accuracy after query 150: 0.9900
+test Accuracy after query 150: 0.9020
+********** Test Accuracy per experiment: 0.902 **********
+********** Experiment 3 (var_ratios-MC_dropout=True): 0:25:55 **********
+Average Test score for var_ratios-MC_dropout=True: 0.9179333333333334
+Saved: result_npy/var_ratios-MC_dropout=TrueASL_MNIST_imbal.npy
+
+---------- Start mean_std-MC_dropout=True training! ----------
+********** Experiment Iterations: 1/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.4700
+test Accuracy after query 5: 0.4252
+Val Accuracy after query 10: 0.5800
+test Accuracy after query 10: 0.5202
+Val Accuracy after query 15: 0.6200
+test Accuracy after query 15: 0.5530
+Val Accuracy after query 20: 0.7300
+test Accuracy after query 20: 0.6450
+Val Accuracy after query 25: 0.7600
+test Accuracy after query 25: 0.6684
+Val Accuracy after query 30: 0.7800
+test Accuracy after query 30: 0.7248
+Val Accuracy after query 35: 0.8600
+test Accuracy after query 35: 0.7442
+Val Accuracy after query 40: 0.8800
+test Accuracy after query 40: 0.7780
+Val Accuracy after query 45: 0.9200
+test Accuracy after query 45: 0.7938
+Val Accuracy after query 50: 0.9200
+test Accuracy after query 50: 0.8144
+Val Accuracy after query 55: 0.9500
+test Accuracy after query 55: 0.8292
+Val Accuracy after query 60: 0.9600
+test Accuracy after query 60: 0.8480
+Val Accuracy after query 65: 0.9700
+test Accuracy after query 65: 0.8528
+Val Accuracy after query 70: 0.9800
+test Accuracy after query 70: 0.8630
+Val Accuracy after query 75: 0.9700
+test Accuracy after query 75: 0.8688
+Val Accuracy after query 80: 0.9700
+test Accuracy after query 80: 0.8880
+Val Accuracy after query 85: 0.9800
+test Accuracy after query 85: 0.8876
+Val Accuracy after query 90: 0.9900
+test Accuracy after query 90: 0.9000
+Val Accuracy after query 95: 0.9800
+test Accuracy after query 95: 0.8932
+Val Accuracy after query 100: 0.9800
+test Accuracy after query 100: 0.8954
+Val Accuracy after query 105: 0.9800
+test Accuracy after query 105: 0.9010
+Val Accuracy after query 110: 1.0000
+test Accuracy after query 110: 0.9148
+Val Accuracy after query 115: 0.9900
+test Accuracy after query 115: 0.9086
+Val Accuracy after query 120: 0.9900
+test Accuracy after query 120: 0.9040
+Val Accuracy after query 125: 0.9900
+test Accuracy after query 125: 0.9050
+Val Accuracy after query 130: 0.9900
+test Accuracy after query 130: 0.9108
+Val Accuracy after query 135: 0.9900
+test Accuracy after query 135: 0.9084
+Val Accuracy after query 140: 0.9900
+test Accuracy after query 140: 0.8996
+Val Accuracy after query 145: 0.9900
+test Accuracy after query 145: 0.9092
+Val Accuracy after query 150: 0.9900
+test Accuracy after query 150: 0.9176
+********** Test Accuracy per experiment: 0.9176 **********
+********** Experiment 1 (mean_std-MC_dropout=True): 0:25:44 **********
+********** Experiment Iterations: 2/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.4400
+test Accuracy after query 5: 0.3694
+Val Accuracy after query 10: 0.4800
+test Accuracy after query 10: 0.4466
+Val Accuracy after query 15: 0.5400
+test Accuracy after query 15: 0.5252
+Val Accuracy after query 20: 0.6500
+test Accuracy after query 20: 0.5314
+Val Accuracy after query 25: 0.7300
+test Accuracy after query 25: 0.6020
+Val Accuracy after query 30: 0.8000
+test Accuracy after query 30: 0.6956
+Val Accuracy after query 35: 0.8300
+test Accuracy after query 35: 0.7104
+Val Accuracy after query 40: 0.8800
+test Accuracy after query 40: 0.7674
+Val Accuracy after query 45: 0.9200
+test Accuracy after query 45: 0.8080
+Val Accuracy after query 50: 0.9400
+test Accuracy after query 50: 0.8342
+Val Accuracy after query 55: 0.9400
+test Accuracy after query 55: 0.8670
+Val Accuracy after query 60: 0.9700
+test Accuracy after query 60: 0.8882
+Val Accuracy after query 65: 0.9800
+test Accuracy after query 65: 0.8902
+Val Accuracy after query 70: 0.9900
+test Accuracy after query 70: 0.8974
+Val Accuracy after query 75: 0.9900
+test Accuracy after query 75: 0.8974
+Val Accuracy after query 80: 0.9700
+test Accuracy after query 80: 0.9120
+Val Accuracy after query 85: 1.0000
+test Accuracy after query 85: 0.9114
+Val Accuracy after query 90: 1.0000
+test Accuracy after query 90: 0.9198
+Val Accuracy after query 95: 1.0000
+test Accuracy after query 95: 0.9256
+Val Accuracy after query 100: 1.0000
+test Accuracy after query 100: 0.9400
+Val Accuracy after query 105: 0.9900
+test Accuracy after query 105: 0.9266
+Val Accuracy after query 110: 0.9900
+test Accuracy after query 110: 0.9248
+Val Accuracy after query 115: 0.9900
+test Accuracy after query 115: 0.9342
+Val Accuracy after query 120: 0.9900
+test Accuracy after query 120: 0.9298
+Val Accuracy after query 125: 0.9900
+test Accuracy after query 125: 0.9386
+Val Accuracy after query 130: 1.0000
+test Accuracy after query 130: 0.9330
+Val Accuracy after query 135: 1.0000
+test Accuracy after query 135: 0.9276
+Val Accuracy after query 140: 0.9900
+test Accuracy after query 140: 0.9388
+Val Accuracy after query 145: 1.0000
+test Accuracy after query 145: 0.9318
+Val Accuracy after query 150: 0.9900
+test Accuracy after query 150: 0.9378
+********** Test Accuracy per experiment: 0.9378 **********
+********** Experiment 2 (mean_std-MC_dropout=True): 0:25:42 **********
+********** Experiment Iterations: 3/3 **********
+X_init.shape:  (48, 1, 28, 28)
+y_init.shape:  (48,)
+Val Accuracy after query 5: 0.3800
+test Accuracy after query 5: 0.3836
+Val Accuracy after query 10: 0.5100
+test Accuracy after query 10: 0.4704
+Val Accuracy after query 15: 0.6000
+test Accuracy after query 15: 0.5688
+Val Accuracy after query 20: 0.6800
+test Accuracy after query 20: 0.6052
+Val Accuracy after query 25: 0.7000
+test Accuracy after query 25: 0.6402
+Val Accuracy after query 30: 0.8100
+test Accuracy after query 30: 0.6922
+Val Accuracy after query 35: 0.8400
+test Accuracy after query 35: 0.7196
+Val Accuracy after query 40: 0.8600
+test Accuracy after query 40: 0.7626
+Val Accuracy after query 45: 0.9000
+test Accuracy after query 45: 0.7950
+Val Accuracy after query 50: 0.9400
+test Accuracy after query 50: 0.8084
+Val Accuracy after query 55: 0.9500
+test Accuracy after query 55: 0.8286
+Val Accuracy after query 60: 0.9700
+test Accuracy after query 60: 0.8590
+Val Accuracy after query 65: 0.9700
+test Accuracy after query 65: 0.8780
+Val Accuracy after query 70: 0.9700
+test Accuracy after query 70: 0.8934
+Val Accuracy after query 75: 0.9700
+test Accuracy after query 75: 0.8852
+Val Accuracy after query 80: 0.9900
+test Accuracy after query 80: 0.8970
+Val Accuracy after query 85: 0.9900
+test Accuracy after query 85: 0.9108
+Val Accuracy after query 90: 0.9900
+test Accuracy after query 90: 0.9090
+Val Accuracy after query 95: 0.9900
+test Accuracy after query 95: 0.9144
+Val Accuracy after query 100: 0.9800
+test Accuracy after query 100: 0.9226
+Val Accuracy after query 105: 0.9900
+test Accuracy after query 105: 0.9104
+Val Accuracy after query 110: 1.0000
+test Accuracy after query 110: 0.9206
+Val Accuracy after query 115: 1.0000
+test Accuracy after query 115: 0.9242
+Val Accuracy after query 120: 1.0000
+test Accuracy after query 120: 0.9304
+Val Accuracy after query 125: 0.9900
+test Accuracy after query 125: 0.9396
+Val Accuracy after query 130: 0.9900
+test Accuracy after query 130: 0.9424
+Val Accuracy after query 135: 0.9900
+test Accuracy after query 135: 0.9362
+Val Accuracy after query 140: 0.9900
+test Accuracy after query 140: 0.9186
+Val Accuracy after query 145: 0.9900
+test Accuracy after query 145: 0.9298
+Val Accuracy after query 150: 0.9900
+test Accuracy after query 150: 0.9432
+********** Test Accuracy per experiment: 0.9432 **********
+********** Experiment 3 (mean_std-MC_dropout=True): 0:25:42 **********
+Average Test score for mean_std-MC_dropout=True: 0.9328666666666666
+Saved: result_npy/mean_std-MC_dropout=TrueASL_MNIST_imbal.npy
+--------------- Done Training! ---------------
+/home/wangsh/DBALwithImgData-main/main.py:60: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show()

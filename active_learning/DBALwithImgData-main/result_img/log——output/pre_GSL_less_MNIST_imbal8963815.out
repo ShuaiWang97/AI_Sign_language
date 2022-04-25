@@ -1,0 +1,50 @@
+/home/wangsh/DBALwithImgData-main/main.py:10: DeprecationWarning: Please use `gaussian_filter1d` from the `scipy.ndimage` namespace, the `scipy.ndimage.filters` namespace is deprecated.
+  from scipy.ndimage.filters import gaussian_filter1d
+Using device: cuda:0
+state_loop:  [True]
+
+---------- Start max_entropy-MC_dropout=True training! ----------
+args.dataset is:  GSL_MNIST_imbal_less
+label_num is:  25
+model.conv1 :  Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+********** Experiment Iterations: 1/1 **********
+X_init.shape:  (38, 1, 28, 28)
+y_init.shape:  (38,)
+Val Accuracy after query 5: 0.2000
+test Accuracy after query 5: 0.1508
+Val Accuracy after query 10: 0.2000
+test Accuracy after query 10: 0.1711
+Val Accuracy after query 15: 0.3500
+test Accuracy after query 15: 0.2066
+Val Accuracy after query 20: 0.3400
+test Accuracy after query 20: 0.2478
+Val Accuracy after query 25: 0.4000
+test Accuracy after query 25: 0.2447
+Val Accuracy after query 30: 0.4800
+test Accuracy after query 30: 0.2843
+Val Accuracy after query 35: 0.5000
+test Accuracy after query 35: 0.3292
+Val Accuracy after query 40: 0.4500
+test Accuracy after query 40: 0.3307
+Val Accuracy after query 45: 0.5800
+test Accuracy after query 45: 0.3886
+Val Accuracy after query 50: 0.6000
+test Accuracy after query 50: 0.4199
+Val Accuracy after query 55: 0.5800
+test Accuracy after query 55: 0.4319
+Val Accuracy after query 60: 0.6400
+test Accuracy after query 60: 0.4512
+Val Accuracy after query 65: 0.6800
+test Accuracy after query 65: 0.5023
+Val Accuracy after query 70: 0.6400
+test Accuracy after query 70: 0.5269
+Val Accuracy after query 75: 0.6800
+test Accuracy after query 75: 0.5331
+/home/wangsh/DBALwithImgData-main/main.py:114: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show()
+Val Accuracy after query 80: 0.7300
+test Accuracy after query 80: 0.5514
+********** Test Accuracy per experiment: 0.5513823682837767 **********
+********** Experiment 1 (max_entropy-MC_dropout=True): 0:27:44 **********
+Average Test score for max_entropy-MC_dropout=True: 0.5513823682837767
+--------------- Done Training! ---------------

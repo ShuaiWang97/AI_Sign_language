@@ -8,9 +8,10 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 from skorch import NeuralNetClassifier
 from scipy.ndimage.filters import gaussian_filter1d
+from torchvision import models
 
 from load_data import LoadGSL_ASL_imbal_Data, LoadGSL_imbal_Data, LoadISL_imbal_Data, LoadData, LoadASLData, \
-    LoadBSLData, LoadASL_imbal_Data, LoadASL_sample_Data
+    LoadBSLData, LoadASL_imbal_Data, LoadASL_sample_Data, LoadGSL_imbal_Data_less
 from cnn_model import ConvNN
 from active_learning import select_acq_function, active_learning_procedure
 import pickle
@@ -19,7 +20,8 @@ def load_pre_model(model, pretrained_dir):
     model_dict = model.state_dict()
     pretrained_dict = torch.load(pretrained_dir)
     # 1. filter out unnecessary keys
-    pretrained_dict = {k: v for k, v in pretrained_dict.items() if "fc" not in k}
+    pretrained_dict = {k: v for k, v in pretrained_dict.items() }
+    #pretrained_dict = {k: v for k, v in pretrained_dict.items() if "fc" not in k}
     # 2. overwrite entries in the existing state dict
     model_dict.update(pretrained_dict) 
     # 3. load the new state dict
@@ -35,12 +37,23 @@ def load_CNN_model(args, device):
         label_num = 10
     elif args.dataset == "ASL_MNIST" or args.dataset == "ASL_MNIST_imbal" or args.dataset == "unwei_ASL_MNIST" or args.dataset == "ASL_GSL_MNIST_imbal":
         label_num = 25
-    elif args.dataset == "ISL_MNIST_imbal" or args.dataset == "GSL_MNIST_imbal":
-        label_num = 26
+    elif args.dataset == "ISL_MNIST_imbal" or args.dataset == "GSL_MNIST_imbal" or args.dataset == "GSL_MNIST_imbal_less":
+        label_num = 25
     elif args.dataset == "BSL_MNIST":
         label_num = 38
     print("label_num is: ", label_num)
-    model = ConvNN(out_size=label_num).to(device)
+    #model = ConvNN(out_size=label_num).to(device)
+    model = models.resnet18(pretrained=True)
+    print("model.conv1 : ",model.conv1)
+    model.conv1 = torch.nn.Conv1d(1, 64, (7, 7), (2, 2), (3, 3), bias=False)
+    fc_inputs = model.fc.in_features
+    model.fc = nn.Sequential(
+    nn.Linear(fc_inputs, 128),
+    nn.ReLU(),
+    nn.Dropout(0.4),
+    nn.Linear(128, label_num))
+    #print("model is: ",model)
+
     
     """
     ###### test laoding model
@@ -59,8 +72,10 @@ def load_CNN_model(args, device):
     model.load_state_dict(model_dict)
     """
     if args.pretrained_model == "True":
-        model =load_pre_model(model=model, pretrained_dir="test/test1.pkl")
+        pretrained_dir="cnn_models/ASL_MNIST_imbal_max__model.pkl"
+        model =load_pre_model(model=model, pretrained_dir=pretrained_dir)
         print("******** loading pretrained model *********")
+        print("pretrained_dir: ",pretrained_dir)
     ######
     cnn_classifier = NeuralNetClassifier(
         module=model,
@@ -290,7 +305,9 @@ def main():
     elif args.dataset == "ISL_MNIST_imbal":
         DataLoader = LoadISL_imbal_Data(args.val_size)
     elif args.dataset == "GSL_MNIST_imbal":
-        DataLoader = LoadGSL_imbal_Data(args.val_size)
+        DataLoader = LoadGSL_imbal_Data(val_size = args.val_size,less_data=False)
+    elif args.dataset == "GSL_MNIST_imbal_less":
+        DataLoader = LoadGSL_imbal_Data_less(val_size = args.val_size)
     elif args.dataset == "ASL_GSL_MNIST_imbal":
         DataLoader = LoadGSL_ASL_imbal_Data(args.val_size)
 

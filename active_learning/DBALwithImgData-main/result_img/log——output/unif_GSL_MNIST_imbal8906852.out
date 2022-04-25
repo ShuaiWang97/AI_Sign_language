@@ -1,0 +1,41 @@
+/home/wangsh/DBALwithImgData-main/main.py:10: DeprecationWarning: Please use `gaussian_filter1d` from the `scipy.ndimage` namespace, the `scipy.ndimage.filters` namespace is deprecated.
+  from scipy.ndimage.filters import gaussian_filter1d
+Using device: cuda:0
+state_loop:  [True]
+
+---------- Start uniform-MC_dropout=True training! ----------
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  26
+********** Experiment Iterations: 1/1 **********
+X_init.shape:  (46, 1, 28, 28)
+y_init.shape:  (46,)
+Val Accuracy after query 5: 0.1900
+test Accuracy after query 5: 0.1050
+Val Accuracy after query 10: 0.2600
+test Accuracy after query 10: 0.1355
+Val Accuracy after query 15: 0.3200
+test Accuracy after query 15: 0.1451
+Val Accuracy after query 20: 0.3700
+test Accuracy after query 20: 0.1849
+Val Accuracy after query 25: 0.4100
+test Accuracy after query 25: 0.2125
+Val Accuracy after query 30: 0.4400
+test Accuracy after query 30: 0.2380
+Val Accuracy after query 35: 0.4700
+test Accuracy after query 35: 0.2576
+Val Accuracy after query 40: 0.5100
+test Accuracy after query 40: 0.2865
+Val Accuracy after query 45: 0.5700
+test Accuracy after query 45: 0.3057
+Val Accuracy after query 50: 0.6100
+test Accuracy after query 50: 0.3287
+Val Accuracy after query 55: 0.6400
+test Accuracy after query 55: 0.3358
+Val Accuracy after query 60: 0.6000
+test Accuracy after query 60: 0.3618
+Val Accuracy after query 65: 0.6500
+test Accuracy after query 65: 0.3860
+Val Accuracy after query 70: 0.7100
+test Accuracy after query 70: 0.3923
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 8906852 ON r33n3 CANCELLED AT 2022-04-07T11:08:57 ***

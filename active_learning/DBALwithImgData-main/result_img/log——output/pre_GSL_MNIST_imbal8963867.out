@@ -1,0 +1,52 @@
+/home/wangsh/DBALwithImgData-main/main.py:10: DeprecationWarning: Please use `gaussian_filter1d` from the `scipy.ndimage` namespace, the `scipy.ndimage.filters` namespace is deprecated.
+  from scipy.ndimage.filters import gaussian_filter1d
+Using device: cuda:0
+state_loop:  [True]
+
+---------- Start max_entropy-MC_dropout=True training! ----------
+args.dataset is:  GSL_MNIST_imbal
+label_num is:  25
+model.conv1 :  Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+******** loading pretrained model *********
+pretrained_dir:  cnn_models/ASL_MNIST_imbal_max__model.pkl
+********** Experiment Iterations: 1/1 **********
+X_init.shape:  (42, 1, 28, 28)
+y_init.shape:  (42,)
+Val Accuracy after query 5: 0.2300
+test Accuracy after query 5: 0.1674
+Val Accuracy after query 10: 0.2300
+test Accuracy after query 10: 0.1941
+Val Accuracy after query 15: 0.4100
+test Accuracy after query 15: 0.2420
+Val Accuracy after query 20: 0.3100
+test Accuracy after query 20: 0.2749
+Val Accuracy after query 25: 0.3400
+test Accuracy after query 25: 0.3073
+Val Accuracy after query 30: 0.3900
+test Accuracy after query 30: 0.3026
+Val Accuracy after query 35: 0.4600
+test Accuracy after query 35: 0.3678
+Val Accuracy after query 40: 0.5000
+test Accuracy after query 40: 0.3891
+Val Accuracy after query 45: 0.5400
+test Accuracy after query 45: 0.4471
+Val Accuracy after query 50: 0.5300
+test Accuracy after query 50: 0.4288
+Val Accuracy after query 55: 0.5200
+test Accuracy after query 55: 0.3803
+Val Accuracy after query 60: 0.6200
+test Accuracy after query 60: 0.4486
+Val Accuracy after query 65: 0.5800
+test Accuracy after query 65: 0.4867
+Val Accuracy after query 70: 0.6200
+test Accuracy after query 70: 0.5055
+Val Accuracy after query 75: 0.6900
+test Accuracy after query 75: 0.5237
+/home/wangsh/DBALwithImgData-main/main.py:114: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show()
+Val Accuracy after query 80: 0.6700
+test Accuracy after query 80: 0.5524
+********** Test Accuracy per experiment: 0.5524256651017214 **********
+********** Experiment 1 (max_entropy-MC_dropout=True): 0:26:7 **********
+Average Test score for max_entropy-MC_dropout=True: 0.5524256651017214
+--------------- Done Training! ---------------
