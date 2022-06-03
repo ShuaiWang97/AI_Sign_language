@@ -4,9 +4,12 @@ from modAL.models import ActiveLearner
 import pickle
 from acquisition_functions import uniform, max_entropy, bald, var_ratios, mean_std
 from sklearn.metrics import confusion_matrix
+import wandb
 
 def active_learning_procedure(
+    pretrain,
     dataset,
+    backbone,
     query_strategy,
     X_val: np.ndarray,
     y_val: np.ndarray,
@@ -36,6 +39,9 @@ def active_learning_procedure(
     """
     print("X_init.shape: ",X_init.shape)
     print("y_init.shape: ",y_init.shape)
+    print("y_test.shape is: ",y_test.shape)
+    print("y_test.shape is: ",X_test.shape)
+    print("query_strategy is: ",query_strategy)
     learner = ActiveLearner(
         estimator=estimator,
         X_training=X_init,
@@ -43,6 +49,17 @@ def active_learning_procedure(
         query_strategy=query_strategy,
     )
     perf_hist = [learner.score(X_test, y_test)]
+    con_max_hist = []
+    
+    wandb.init(
+        # Set the project where this run will be logged
+        project="AL_"+dataset,
+        # Track hyperparameters and run metadata
+        config={
+        "acq_functions": query_strategy,
+        "dataset": dataset,
+        })
+    
     for index in range(T):
         query_idx, query_instance = learner.query(
             X_pool, n_query=n_query, T=T, training=training
@@ -52,25 +69,28 @@ def active_learning_procedure(
         y_pool = np.delete(y_pool, query_idx, axis=0)
         model_accuracy_val = learner.score(X_val, y_val)
         model_accuracy_test = learner.score(X_test, y_test)
+        wandb.log({"accuracy_test": model_accuracy_test})
         if (index + 1) % 5 == 0:
-            print(f"Val Accuracy after query {index+1}: {model_accuracy_val:0.4f}")
             print(f"test Accuracy after query {index+1}: {model_accuracy_test:0.4f}")
+        
+        #calculate confusion matrix
+        y_pred = learner.predict(X_test)
+        con_mat = confusion_matrix(y_test, y_pred)
         perf_hist.append(model_accuracy_test)
+        con_max_hist.append(con_mat)
     model_accuracy_test = learner.score(X_test, y_test)
     print(f"********** Test Accuracy per experiment: {model_accuracy_test} **********")
     # return a confusion matrix here
-    y_pred = learner.predict(X_test)
-    con_mat = confusion_matrix(y_test, y_pred)
+    #y_pred = learner.predict(X_test)
+    #con_mat = confusion_matrix(y_test, y_pred)
     
-    #np.savetxt(dataset+"con_mat"+str(query_strategy)[10:14]+".csv", con_mat, delimiter=',')
+    #np.savetxt("con_mat/"+dataset+backbone+"_pre_"+pretrain+"_con_mat"+str(query_strategy)[10:14]+".csv", con_mat, delimiter=',')
     #learner.estimator.save_params(f_params='models/'+dataset+"_"+str(query_strategy)[10:14]+'_model.pkl')
-    # saving
-    #with open('some-file.pkl', 'wb') as f:
-    #    pickle.dump(learner.estimator, f)
-    torch.save(learner.estimator.module.state_dict(), "cnn_models/"+dataset+"_"+str(query_strategy)[10:14]+'_model.pkl')
+    # saving do not save for pretrained model?
+    torch.save(learner.estimator.module.state_dict(), "cnn_models/"+dataset+"_"+backbone+"_"+str(query_strategy)[10:14]+pretrain+'_conv_model.pkl')
     
     # return the test accuracy history, and final test acc
-    return perf_hist, model_accuracy_test
+    return con_max_hist, perf_hist, model_accuracy_test
 
 
 def select_acq_function(acq_func: int = 0) -> list:

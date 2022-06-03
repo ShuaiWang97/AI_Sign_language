@@ -5,13 +5,14 @@ import numpy as np
 import seaborn as sns
 import torch
 import torch.nn as nn
+import wandb
 import matplotlib.pyplot as plt
 from skorch import NeuralNetClassifier
 from scipy.ndimage.filters import gaussian_filter1d
 from torchvision import models
 
-from load_data import LoadGSL_ASL_imbal_Data, LoadGSL_imbal_Data, LoadISL_imbal_Data, LoadData, LoadASLData, \
-    LoadBSLData, LoadASL_imbal_Data, LoadASL_sample_Data, LoadGSL_imbal_Data_less
+from load_data import LoadChinese_SL_imbal_Data, LoadGSL_ASL_imbal_Data, LoadGSL_imbal_Data, LoadIrish_SL_imbal_Data, LoadData, LoadASLData, \
+    LoadBSLData, LoadASL_imbal_Data 
 from cnn_model import ConvNN
 from active_learning import select_acq_function, active_learning_procedure
 import pickle
@@ -20,7 +21,7 @@ def load_pre_model(model, pretrained_dir):
     model_dict = model.state_dict()
     pretrained_dict = torch.load(pretrained_dir)
     # 1. filter out unnecessary keys
-    pretrained_dict = {k: v for k, v in pretrained_dict.items() }
+    pretrained_dict = {k: v for k, v in pretrained_dict.items() if "fc" not in k}
     #pretrained_dict = {k: v for k, v in pretrained_dict.items() if "fc" not in k}
     # 2. overwrite entries in the existing state dict
     model_dict.update(pretrained_dict) 
@@ -37,42 +38,36 @@ def load_CNN_model(args, device):
         label_num = 10
     elif args.dataset == "ASL_MNIST" or args.dataset == "ASL_MNIST_imbal" or args.dataset == "unwei_ASL_MNIST" or args.dataset == "ASL_GSL_MNIST_imbal":
         label_num = 25
-    elif args.dataset == "ISL_MNIST_imbal" or args.dataset == "GSL_MNIST_imbal" or args.dataset == "GSL_MNIST_imbal_less":
+    elif args.dataset == "Irish_SL_MNIST_imbal" or args.dataset == "GSL_MNIST_imbal" or args.dataset == "GSL_MNIST_imbal_less" or args.dataset=="Chinese_SL_MNIST_imbal":
         label_num = 25
     elif args.dataset == "BSL_MNIST":
         label_num = 38
     print("label_num is: ", label_num)
-    #model = ConvNN(out_size=label_num).to(device)
-    model = models.resnet18(pretrained=True)
-    print("model.conv1 : ",model.conv1)
-    model.conv1 = torch.nn.Conv1d(1, 64, (7, 7), (2, 2), (3, 3), bias=False)
-    fc_inputs = model.fc.in_features
-    model.fc = nn.Sequential(
-    nn.Linear(fc_inputs, 128),
-    nn.ReLU(),
-    nn.Dropout(0.4),
-    nn.Linear(128, label_num))
-    #print("model is: ",model)
+    
+    if args.backbone=="cnn":
+      model = ConvNN(out_size=label_num,img_rows=28,img_cols=28).to(device)
+    elif args.backbone=="res18":
+      model = models.resnet18(pretrained=False)
+      model.conv1 = torch.nn.Conv1d(1, 64, (7, 7), (2, 2), (3, 3), bias=False)
+      fc_inputs = model.fc.in_features
+      model.fc = nn.Sequential(
+      nn.Linear(fc_inputs, 128),
+      nn.ReLU(),
+      nn.Dropout(0.4),
+      nn.Linear(128, label_num))
+    print("args.backbone is: ",args.backbone)
 
-    
-    """
-    ###### test laoding model
-    print("model.type :",model.type)
-    model_dict = model.state_dict()
-    pretrained_dict = torch.load("test/test1.pkl")
-    # 1. filter out unnecessary keys
-    pretrained_dict = {k: v for k, v in pretrained_dict.items() if "fc" not in k}
-    for k, v in pretrained_dict.items():
-        if "fc" not in k:
-            print(k)
-    
-    # 2. overwrite entries in the existing state dict
-    model_dict.update(pretrained_dict) 
-    # 3. load the new state dict
-    model.load_state_dict(model_dict)
-    """
-    if args.pretrained_model == "True":
-        pretrained_dir="cnn_models/ASL_MNIST_imbal_max__model.pkl"
+    if args.pretrained_model != "False":
+        if args.pretrained_model == "GSL_MNIST_imbal":
+            pretrained_dir="cnn_models/pretrained/resnet18GSL_MNIST_imbal_False_28.pkl"
+        if args.pretrained_model == "Chinese_SL_MNIST_imbal":
+            pretrained_dir = "cnn_models/pretrained/resnet18Chinese_SL_MNIST_imbal_False_28.pkl"
+        if args.pretrained_model == "Irish_SL_MNIST_imbal":
+            pretrained_dir = "cnn_models/pretrained/resnet18Irish_SL_MNIST_imbal_False_28.pkl"
+        if args.pretrained_model == "ASL_MNIST_imbal":
+            pretrained_dir = "cnn_models/pretrained/resnet18ASL_MNIST_imbal_False_28.pkl"
+        if args.pretrained_model == "Fashion_MNIST":
+            pretrained_dir = "cnn_models/pretrained/resnet18Fashion_MNIST_False_28.pkl"
         model =load_pre_model(model=model, pretrained_dir=pretrained_dir)
         print("******** loading pretrained model *********")
         print("pretrained_dir: ",pretrained_dir)
@@ -104,7 +99,7 @@ def save_as_npy(data: np.ndarray, folder: str, name: str, sub_name: str):
     print(f"Saved: {file_name}")
 
 
-def plot_results(data: dict, name: str):
+def plot_results(args, data: dict, name: str):
     """Plot results histogram using matplotlib"""
     sns.set()
     for key in data.keys():
@@ -112,7 +107,7 @@ def plot_results(data: dict, name: str):
         plt.plot(data[key], label=key)
     plt.legend()
     plt.show()
-    plt.savefig("final_reslt" + name + ".png")
+    plt.savefig( name +"_"+ args.backbone+".png")
 
 
 def print_elapsed_time(start_time: float, exp: int, acq_func: str):
@@ -151,29 +146,21 @@ def train_active_learning(args, device, datasets: dict) -> dict:
     print("state_loop: ", state_loop)
     for state in state_loop:
         for i, acq_func in enumerate(acq_functions):
-            avg_hist = []
+            
+            all_hist = []
             test_scores = []
+            all_con_mat=[]
             acq_func_name = str(acq_func).split(" ")[1] + "-MC_dropout=" + str(state)
             print(f"\n---------- Start {acq_func_name} training! ----------")
             for e in range(args.experiments):
                 start_time = time.time()
                 estimator = load_CNN_model(args, device)
-                """
-                # load the pretrained model
-                if args.pretrained_model == "True":
-                    print("******** loading pretrained model *********")
-                    estimator.initialize()
-                    #estimator.load_params(
-                    #    f_params='models/' + "ASL_MNIST_imbal" + "_" + str(acq_func)[10:14] + '_model.pkl')
-                    with open('some-file.pkl', 'rb') as f:
-                        pre_trained = pickle.load(f)
-                        #del pre_trained['fc1']
-                    print("estimator is: ",estimator)
-                """
                 print(
                     f"********** Experiment Iterations: {e + 1}/{args.experiments} **********"
                 )
-                training_hist, test_score = active_learning_procedure(dataset=args.dataset,
+                con_max_hist, training_hist, test_score = active_learning_procedure(pretrain=args.pretrained_model,
+                                                                      dataset=args.dataset,
+                                                                      backbone = args.backbone,
                                                                       query_strategy=acq_func,
                                                                       X_val=datasets["X_val"],
                                                                       y_val=datasets["y_val"],
@@ -188,14 +175,18 @@ def train_active_learning(args, device, datasets: dict) -> dict:
                                                                       n_query=args.query,
                                                                       training=state
                                                                       )
-                avg_hist.append(training_hist)
+                all_hist.append(training_hist)
+                print("training_hist is: ",training_hist)
                 test_scores.append(test_score)
+                all_con_mat.append(con_max_hist)
                 print_elapsed_time(start_time, e + 1, acq_func_name)
-            avg_hist = np.average(np.array(avg_hist), axis=0)
+            avg_hist = np.average(np.array(all_hist), axis=0)
             avg_test = sum(test_scores) / len(test_scores)
             print(f"Average Test score for {acq_func_name}: {avg_test}")
             results[acq_func_name] = avg_hist
-            # save_as_npy(data=avg_hist, folder=args.result_dir ,name=acq_func_name, sub_name=args.dataset )
+            save_as_npy(data=all_con_mat, folder="con_mat" ,name="con_mat_"+args.dataset+str(acq_func)[10:14]+args.backbone, sub_name="pre_train"+args.pretrained_model )
+            save_as_npy(data=all_hist, folder=args.result_dir ,name=args.dataset+str(acq_func)[10:14]+args.backbone, sub_name="pre_train"+args.pretrained_model )
+            
     print("--------------- Done Training! ---------------")
     return results
 
@@ -288,6 +279,13 @@ def main():
         metavar="SD",
         help="Choose if to load pretrained model (default: False)",
     )
+    parser.add_argument(
+        "--backbone",
+        type=str,
+        default="cnn",
+        metavar="SD",
+        help="Choose what backbone to use (default: cnn)",
+    )
 
     args = parser.parse_args()
     torch.manual_seed(args.seed)
@@ -298,22 +296,16 @@ def main():
     # change LoadData of MNIST to LoadSignData SignMNIST
     if args.dataset == "MNIST":
         DataLoader = LoadData(args.val_size)
-    elif args.dataset == "unwei_ASL_MNIST":
-        DataLoader = LoadASLData(args.val_size)
+    elif args.dataset == "Chinese_SL_MNIST_imbal": 
+        DataLoader = LoadChinese_SL_imbal_Data(val_size=10)
     elif args.dataset == "ASL_MNIST_imbal":
         DataLoader = LoadASL_imbal_Data(args.val_size)
-    elif args.dataset == "ISL_MNIST_imbal":
-        DataLoader = LoadISL_imbal_Data(args.val_size)
+    elif args.dataset == "Irish_SL_MNIST_imbal":
+        DataLoader = LoadIrish_SL_imbal_Data(args.val_size)
     elif args.dataset == "GSL_MNIST_imbal":
         DataLoader = LoadGSL_imbal_Data(val_size = args.val_size,less_data=False)
-    elif args.dataset == "GSL_MNIST_imbal_less":
-        DataLoader = LoadGSL_imbal_Data_less(val_size = args.val_size)
     elif args.dataset == "ASL_GSL_MNIST_imbal":
         DataLoader = LoadGSL_ASL_imbal_Data(args.val_size)
-
-    # elif args.dataset == "unwei_ASL_MNIST":
-    #    Something odd happen, shows error Dataloader did not defined
-    #    Dataloader = LoadASL_sample_Data(args.val_size)
     elif args.dataset == "BSL_MNIST":
         DataLoader = LoadBSLData(args.val_size)
     else:
@@ -333,7 +325,7 @@ def main():
         os.mkdir(args.result_dir)
 
     results = train_active_learning(args, device, datasets)
-    plot_results(data=results, name=args.dataset)
+    plot_results(args=args, data=results, name=args.dataset)
 
 
 if __name__ == "__main__":
