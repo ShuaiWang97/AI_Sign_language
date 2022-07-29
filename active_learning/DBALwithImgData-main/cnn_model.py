@@ -9,8 +9,8 @@ class ConvNN(nn.Module):
         num_filters: int = 32,
         kernel_size: int = 4,
         dense_layer: int = 128,
-        img_rows: int = 28,
-        img_cols: int = 28,
+        img_rows: int = 96,
+        img_cols: int = 96,
         maxpool: int = 2,
         out_size: int = 25,
     ):

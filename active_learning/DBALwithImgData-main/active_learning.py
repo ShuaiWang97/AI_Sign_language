@@ -5,10 +5,13 @@ import pickle
 from acquisition_functions import uniform, max_entropy, bald, var_ratios, mean_std
 from sklearn.metrics import confusion_matrix
 import wandb
+from gradcam import run_grad_cam
+
 
 def active_learning_procedure(
     pretrain,
     dataset,
+    save_path,
     backbone,
     query_strategy,
     X_val: np.ndarray,
@@ -70,9 +73,13 @@ def active_learning_procedure(
         model_accuracy_val = learner.score(X_val, y_val)
         model_accuracy_test = learner.score(X_test, y_test)
         wandb.log({"accuracy_test": model_accuracy_test})
+        
+        # Get gradcam for expalining
+        
         if (index + 1) % 5 == 0:
             print(f"test Accuracy after query {index+1}: {model_accuracy_test:0.4f}")
-        
+            run_grad_cam(dataset = dataset, model = learner.estimator.module, save_path=save_path, iterr=index)
+            
         #calculate confusion matrix
         y_pred = learner.predict(X_test)
         con_mat = confusion_matrix(y_test, y_pred)
@@ -80,13 +87,6 @@ def active_learning_procedure(
         con_max_hist.append(con_mat)
     model_accuracy_test = learner.score(X_test, y_test)
     print(f"********** Test Accuracy per experiment: {model_accuracy_test} **********")
-    # return a confusion matrix here
-    #y_pred = learner.predict(X_test)
-    #con_mat = confusion_matrix(y_test, y_pred)
-    
-    #np.savetxt("con_mat/"+dataset+backbone+"_pre_"+pretrain+"_con_mat"+str(query_strategy)[10:14]+".csv", con_mat, delimiter=',')
-    #learner.estimator.save_params(f_params='models/'+dataset+"_"+str(query_strategy)[10:14]+'_model.pkl')
-    # saving do not save for pretrained model?
     torch.save(learner.estimator.module.state_dict(), "cnn_models/"+dataset+"_"+backbone+"_"+str(query_strategy)[10:14]+pretrain+'_conv_model.pkl')
     
     # return the test accuracy history, and final test acc

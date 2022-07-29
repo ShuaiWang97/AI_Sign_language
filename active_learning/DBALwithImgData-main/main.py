@@ -11,17 +11,26 @@ from skorch import NeuralNetClassifier
 from scipy.ndimage.filters import gaussian_filter1d
 from torchvision import models
 
-from load_data import LoadChinese_SL_imbal_Data, LoadGSL_ASL_imbal_Data, LoadGSL_imbal_Data, LoadIrish_SL_imbal_Data, LoadData, LoadASLData, \
-    LoadBSLData, LoadASL_imbal_Data 
+from load_data import LoadChinese_SL_imbal_Data, LoadGSL_imbal_Data, LoadIrish_SL_imbal_Data, LoadData, LoadASL_imbal_Data 
 from cnn_model import ConvNN
 from active_learning import select_acq_function, active_learning_procedure
 import pickle
+from datetime import datetime
+import pathlib
 
+
+def set_seed(seed):
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available(): # GPU operation have separate seed
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+        
 def load_pre_model(model, pretrained_dir):
     model_dict = model.state_dict()
     pretrained_dict = torch.load(pretrained_dir)
     # 1. filter out unnecessary keys
-    pretrained_dict = {k: v for k, v in pretrained_dict.items() if "fc" not in k}
+    pretrained_dict = {k: v for k, v in pretrained_dict.items()  if "fc" not in k}
     #pretrained_dict = {k: v for k, v in pretrained_dict.items() if "fc" not in k}
     # 2. overwrite entries in the existing state dict
     model_dict.update(pretrained_dict) 
@@ -45,7 +54,7 @@ def load_CNN_model(args, device):
     print("label_num is: ", label_num)
     
     if args.backbone=="cnn":
-      model = ConvNN(out_size=label_num,img_rows=28,img_cols=28).to(device)
+      model = ConvNN(out_size=label_num,img_rows=96,img_cols=96).to(device)
     elif args.backbone=="res18":
       model = models.resnet18(pretrained=False)
       model.conv1 = torch.nn.Conv1d(1, 64, (7, 7), (2, 2), (3, 3), bias=False)
@@ -59,15 +68,15 @@ def load_CNN_model(args, device):
 
     if args.pretrained_model != "False":
         if args.pretrained_model == "GSL_MNIST_imbal":
-            pretrained_dir="cnn_models/pretrained/resnet18GSL_MNIST_imbal_False_28.pkl"
+            pretrained_dir="cnn_models/pretrained_96/res18GSL_MNIST_imbal_False_96.pkl"
         if args.pretrained_model == "Chinese_SL_MNIST_imbal":
-            pretrained_dir = "cnn_models/pretrained/resnet18Chinese_SL_MNIST_imbal_False_28.pkl"
+            pretrained_dir = "cnn_models/pretrained_96/res18Chinese_SL_MNIST_imbal_False_96.pkl"
         if args.pretrained_model == "Irish_SL_MNIST_imbal":
-            pretrained_dir = "cnn_models/pretrained/resnet18Irish_SL_MNIST_imbal_False_28.pkl"
+            pretrained_dir = "cnn_models/pretrained_96/res18Irish_SL_MNIST_imbal_False_96.pkl"
         if args.pretrained_model == "ASL_MNIST_imbal":
-            pretrained_dir = "cnn_models/pretrained/resnet18ASL_MNIST_imbal_False_28.pkl"
+            pretrained_dir = "cnn_models/pretrained_96/res18ASL_MNIST_imbal_False_96.pkl"
         if args.pretrained_model == "Fashion_MNIST":
-            pretrained_dir = "cnn_models/pretrained/resnet18Fashion_MNIST_False_28.pkl"
+            pretrained_dir = "cnn_models/pretrained/resnet18Fashion_MNIST_False_96.pkl"
         model =load_pre_model(model=model, pretrained_dir=pretrained_dir)
         print("******** loading pretrained model *********")
         print("pretrained_dir: ",pretrained_dir)
@@ -144,6 +153,11 @@ def train_active_learning(args, device, datasets: dict) -> dict:
         state_loop = [True]  # run dropout only
 
     print("state_loop: ", state_loop)
+    time_str = datetime.now().strftime("%Y_%m_%d_%H_")
+    trunc_str = f"{args.dataset}_trunc_{args.pretrained_model}"
+    save_path = os.path.join('GradCam', time_str + trunc_str)
+    pathlib.Path(save_path).mkdir(parents=True, exist_ok=True)
+    
     for state in state_loop:
         for i, acq_func in enumerate(acq_functions):
             
@@ -153,6 +167,8 @@ def train_active_learning(args, device, datasets: dict) -> dict:
             acq_func_name = str(acq_func).split(" ")[1] + "-MC_dropout=" + str(state)
             print(f"\n---------- Start {acq_func_name} training! ----------")
             for e in range(args.experiments):
+                set_seed(e)
+                print("random seed is:",e)
                 start_time = time.time()
                 estimator = load_CNN_model(args, device)
                 print(
@@ -160,6 +176,7 @@ def train_active_learning(args, device, datasets: dict) -> dict:
                 )
                 con_max_hist, training_hist, test_score = active_learning_procedure(pretrain=args.pretrained_model,
                                                                       dataset=args.dataset,
+                                                                      save_path = save_path,
                                                                       backbone = args.backbone,
                                                                       query_strategy=acq_func,
                                                                       X_val=datasets["X_val"],
@@ -288,7 +305,8 @@ def main():
     )
 
     args = parser.parse_args()
-    torch.manual_seed(args.seed)
+    print(args)
+    #torch.manual_seed(args.seed)
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
@@ -304,10 +322,6 @@ def main():
         DataLoader = LoadIrish_SL_imbal_Data(args.val_size)
     elif args.dataset == "GSL_MNIST_imbal":
         DataLoader = LoadGSL_imbal_Data(val_size = args.val_size,less_data=False)
-    elif args.dataset == "ASL_GSL_MNIST_imbal":
-        DataLoader = LoadGSL_ASL_imbal_Data(args.val_size)
-    elif args.dataset == "BSL_MNIST":
-        DataLoader = LoadBSLData(args.val_size)
     else:
         print("!!! This dataset is not included !!!")
     (

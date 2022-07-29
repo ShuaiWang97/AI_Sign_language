@@ -9,8 +9,7 @@ import torch.nn as nn
 from skorch import NeuralNetClassifier
 from acquisition_functions import uniform,var_ratios
 
-from load_data import LoadChinese_SL_imbal_Data, LoadGSL_ASL_imbal_Data, LoadGSL_imbal_Data, LoadIrish_SL_imbal_Data, LoadData, LoadASLData, \
-    LoadBSLData, LoadASL_imbal_Data 
+from load_data import LoadChinese_SL_imbal_Data, LoadGSL_imbal_Data, LoadIrish_SL_imbal_Data, LoadData, LoadASL_imbal_Data 
     
 def load_CNN_model(args, device):
     """Load CNN model"""
@@ -60,7 +59,7 @@ def test_active_learning(args, device, datasets: dict):
     
     #fname="con_mat/"+dataset+"_pre_"+pretrain+"_con_mat"+str(query_strategy)[10:14]+".csv"
     #print(dataset.type)
-    np.savetxt("con_mat/con_mat"+str(dataset)+pretrain+str(query_strategy)[10:14]+".csv", con_mat, delimiter=',')
+    #np.savetxt("con_mat/con_mat"+str(dataset)+pretrain+str(query_strategy)[10:14]+".csv", con_mat, delimiter=',')
 
     
 def main():
@@ -129,3 +128,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+## example running code
+#python test_classifier.py --dataset Irish_SL_MNIST_imbal --model_path ./cnn_models/Irish_SL_MNIST_imbal_res18_var_ASL_MNIST_imbal_conv_model.pkl
